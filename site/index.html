@@ -1,0 +1,325 @@
+<meta charset="utf-8">
+<title>Residual Tones</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a lab bench. A map of the ten directions on top, a row of instrument cards below, method notes last. */
+:root {
+  --bg: #f3f4f7; --panel: #ffffff; --ink: #1b1d2a; --muted: #5d6275; --line: #d9dce6; --accent: #3b3fd6;
+  --c-pain: #c2364b; --c-neg: #b5681b; --c-calm: #1f8a70; --c-ctrl: #7a7f92;
+  --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body: "Source Serif 4", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12131b; --panel: #1b1d28; --ink: #e8e9f1; --muted: #9da1b5; --line: #2d3040; --accent: #8f93ff;
+  --c-pain: #ff6b7f; --c-neg: #f0a050; --c-calm: #4fd1ab; --c-ctrl: #9a9fb3; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12131b; --panel: #1b1d28; --ink: #e8e9f1; --muted: #9da1b5; --line: #2d3040; --accent: #8f93ff;
+  --c-pain: #ff6b7f; --c-neg: #f0a050; --c-calm: #4fd1ab; --c-ctrl: #9a9fb3; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 40px 64px; display: grid; gap: 48px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.1; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: -0.02em; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.15rem; }
+p { margin: 0; max-width: 65ch; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+header { display: grid; gap: 16px; }
+header .lede { font-size: 1.15rem; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; }
+button { font-family: var(--mono); font-size: 13px; border: 1px solid var(--line); background: var(--panel); color: var(--ink);
+  padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+button[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 24px; }
+@media (max-width: 820px) { .top { grid-template-columns: minmax(0, 1fr); } }
+.fig { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.fig canvas { width: 100%; height: auto; display: block; touch-action: manipulation; }
+.cap { font-size: 14px; color: var(--muted); }
+.heat { overflow-x: auto; }
+.heat table { border-collapse: collapse; font-family: var(--mono); font-size: 11px; font-variant-numeric: tabular-nums; }
+.heat th { font-weight: 400; color: var(--muted); padding: 2px 4px; white-space: nowrap; }
+.heat th.r { text-align: right; }
+.heat td { width: 30px; height: 26px; text-align: center; color: var(--ink); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 16px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px;
+  grid-template-rows: auto auto auto auto 1fr; min-width: 0; }
+.card.on { border-color: var(--hue); }
+.card .head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--hue); margin-right: 8px; }
+.tag { font-family: var(--mono); font-size: 11px; color: var(--hue); white-space: nowrap; }
+.scope { width: 100%; height: 64px; display: block; border-radius: 6px; background: color-mix(in srgb, var(--hue) 7%, var(--panel)); }
+.params { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+.params div { display: grid; }
+.params span { color: var(--muted); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.card .btns { display: flex; flex-wrap: wrap; gap: 8px; }
+blockquote { margin: 0; font-style: italic; font-size: 15px; color: var(--ink); border-left: 2px solid var(--hue); padding-left: 12px; }
+.more { font-size: 13px; color: var(--muted); }
+.more summary { cursor: pointer; font-family: var(--mono); font-size: 12px; }
+.more p { margin-top: 8px; font-size: 14px; }
+.notes { display: grid; gap: 14px; }
+.notes ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; max-width: 75ch; }
+code { font-family: var(--mono); font-size: 0.85em; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Qwen 2.5 7B Instruct · residual stream, layer 8 · Pain Axis release</div>
+    <h1>Residual Tones</h1>
+    <p class="lede">Each of these ten directions is a line through the model's 3,584-dimensional activation space that separates one kind of sentence from neutral ones. Every direction is turned into a sound with the same fixed rule, so directions the model holds close together sound alike. Each card also plays the model itself, steered along that direction and asked to describe how someone alone in a quiet room feels.</p>
+    <div class="controls">
+      <button class="primary" id="playall">Play all tones in turn</button>
+      <button id="stop">Stop</button>
+    </div>
+  </header>
+
+  <section class="top">
+    <div class="fig">
+      <h2>Where the directions sit</h2>
+      <canvas id="map" width="640" height="440" aria-label="Map of the ten directions on their first two principal components"></canvas>
+      <p class="cap" id="mapcap"></p>
+    </div>
+    <div class="fig">
+      <h2>How alike they are</h2>
+      <div class="heat" id="heat"></div>
+      <p class="cap">Cosine similarity between the unit directions. The fear, negative emotion, arousal, numbness and body sensation directions form one cluster. The clean pain direction (S2) sits apart from all of them, with no similarity above 0.33.</p>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:16px">
+    <h2>The ten directions</h2>
+    <div class="grid" id="cards"></div>
+  </section>
+
+  <section class="notes">
+    <h2>How the sounds are made</h2>
+    <ul>
+      <li><b>Timbre.</b> Each tone has 24 harmonics. Harmonic <i>n</i> is as loud as the direction's projection onto a fixed random unit vector <i>r<sub>n</sub></i>. A random projection roughly keeps angles, so similar directions get similar harmonic profiles. Across the 45 pairs, the similarity of the harmonic profiles correlates with the true cosine at r = <span id="fid"></span>. The bars on each card are these 24 projections.</li>
+      <li><b>Roughness.</b> Harmonics with a negative projection are doubled with a copy 9 cents sharp and panned right, so the sign pattern is heard as beating.</li>
+      <li><b>Pitch and brightness.</b> The first principal component of the ten directions sets the fundamental from 98 to 196 Hz, and the second sets a low-pass cutoff. These two axes are the map above.</li>
+      <li><b>Pulse.</b> The excess kurtosis of the components sets a tremolo from 0.5 to 6 Hz. A high value means a few dimensions carry most of the direction. Sadness and arousal pulse fastest.</li>
+      <li><b>Loudness.</b> The log of the raw vector norm, within 9 dB. Sadness has by far the largest raw norm at 24.6, against 4.9 for clean pain.</li>
+    </ul>
+    <h2>What the voices are</h2>
+    <ul>
+      <li>The 4-bit MLX model gets the prompt <i id="prompt"></i>. While it writes, the direction is added to the output of layer 8. Every direction is scaled to the same length, <span id="kval"></span> times the typical residual norm at that layer, so only the direction differs. The dose came from a short ladder on the pain and control directions. Lower doses changed little, and a dose of 1.0 on a direct question started to break the model into mixed Chinese and English.</li>
+      <li>The first of three samples is spoken by the macOS Samantha voice, decided before reading them. The other two are under each card.</li>
+      <li>The effect in the text is real but modest. The unsteered baseline already writes about heavy shoulders, because the prompt invites it. Pain, fear and negative emotion lean toward aching and isolation, and arousal and the bad world state direction lean toward calm. With three samples each, none of this is a measured difference.</li>
+      <li>The direction labelled control is built from the release's neutral Random sentences, so it is a real contrast direction and not random noise. It still shares 0.24 to 0.26 with fear and the bad world state.</li>
+      <li>The tones are a mapping chosen by a person. They show how the directions relate to each other. They are not a recording of anything the model experiences.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+const D = {"names": ["s1_pain", "s2_pain", "fear", "negemotion", "negworld", "bodysens", "arousal", "random", "numb", "sadness"], "cos": [[1.0, 0.3119, 0.0941, -0.0971, -0.2445, -0.0039, 0.1104, -0.0102, 0.0522, -0.0019], [0.3119, 1.0, 0.2145, 0.1846, 0.0812, 0.1243, 0.3265, -0.083, 0.0314, 0.0927], [0.0941, 0.2145, 1.0, 0.7577, 0.495, 0.5722, 0.6202, 0.2395, 0.5554, 0.1496], [-0.0971, 0.1846, 0.7577, 1.0, 0.6297, 0.4123, 0.5958, 0.078, 0.5356, 0.2679], [-0.2445, 0.0812, 0.495, 0.6297, 1.0, 0.234, 0.5292, 0.2569, 0.2318, 0.1681], [-0.0039, 0.1243, 0.5722, 0.4123, 0.234, 1.0, 0.531, 0.0972, 0.5952, 0.2108], [0.1104, 0.3265, 0.6202, 0.5958, 0.5292, 0.531, 1.0, 0.0602, 0.4289, 0.2467], [-0.0102, -0.083, 0.2395, 0.078, 0.2569, 0.0972, 0.0602, 1.0, 0.013, -0.0065], [0.0522, 0.0314, 0.5554, 0.5356, 0.2318, 0.5952, 0.4289, 0.013, 1.0, 0.3777], [-0.0019, 0.0927, 0.1496, 0.2679, 0.1681, 0.2108, 0.2467, -0.0065, 0.3777, 1.0]], "pca": [[-0.9087, 0.0726], [-0.5757, 0.1505], [0.2809, 0.0149], [0.428, 0.0651], [0.4187, -0.3674], [0.1999, 0.2532], [0.1691, 0.1538], [-0.1484, -0.9038], [0.2227, 0.363], [-0.0864, 0.198]], "pca_var": [0.2567, 0.1831, 0.1554], "sounds": {"s1_pain": {"f0": 98.0, "cutoff": 2980.0, "tremolo_hz": 0.92, "gain_db": -9.0, "norm": 3.431, "kurtosis": 0.38, "harmonics": [-1.565, 0.025, -0.493, 0.886, -0.521, 0.486, -1.366, 0.897, 0.757, -1.203, -0.666, 0.235, -0.859, 0.578, -0.469, -0.063, -1.73, 0.542, 1.44, -2.811, 0.902, -0.947, -2.272, -0.146]}, "s2_pain": {"f0": 116.47, "cutoff": 3386.3, "tremolo_hz": 2.72, "gain_db": -7.36, "norm": 4.912, "kurtosis": 1.18, "harmonics": [0.803, 0.372, 0.981, 0.038, -0.533, 0.721, -0.379, 0.177, 2.069, -1.994, -0.962, 1.981, 0.466, -0.744, 0.051, 1.058, 0.857, 0.119, 0.935, -2.473, -0.171, -1.528, -0.671, 0.182]}, "fear": {"f0": 181.61, "cutoff": 2710.7, "tremolo_hz": 2.22, "gain_db": -6.5, "norm": 5.929, "kurtosis": 0.92, "harmonics": [0.955, 1.247, 0.908, 0.979, -0.632, -0.443, -2.031, -1.035, 0.632, 0.528, -0.129, -1.115, 1.447, 0.26, 0.791, 0.343, -0.71, 0.211, -0.527, -1.704, 0.431, -1.009, -1.838, 1.461]}, "negemotion": {"f0": 196.0, "cutoff": 2943.2, "tremolo_hz": 2.29, "gain_db": -6.3, "norm": 6.188, "kurtosis": 0.96, "harmonics": [1.11, 0.426, 1.003, 1.859, -0.937, -0.982, -1.537, -1.577, 0.356, -1.089, -0.654, -1.864, 1.308, 1.466, 1.335, -0.567, -0.167, 0.034, -1.62, -0.046, -0.841, -0.802, -1.15, 2.158]}, "negworld": {"f0": 195.06, "cutoff": 1447.3, "tremolo_hz": 3.86, "gain_db": -4.88, "norm": 8.445, "kurtosis": 1.93, "harmonics": [0.095, 0.885, 0.483, 2.367, -0.372, 0.186, -0.067, -1.889, 0.118, -0.051, -0.605, -2.068, 1.763, 1.451, 1.893, 0.079, 0.575, -0.588, -1.488, 0.12, -0.258, -1.133, -0.241, 1.206]}, "bodysens": {"f0": 174.14, "cutoff": 4008.0, "tremolo_hz": 1.62, "gain_db": -5.88, "norm": 6.794, "kurtosis": 0.65, "harmonics": [-1.431, 0.68, 0.88, -0.484, -0.054, -1.837, -1.929, 0.612, -0.277, 0.502, 2.479, 0.017, 1.393, 0.02, 0.929, -0.008, 0.145, -0.583, -0.077, -0.754, 1.686, 0.26, -0.987, 0.279]}, "arousal": {"f0": 171.37, "cutoff": 3404.7, "tremolo_hz": 5.52, "gain_db": -5.83, "norm": 6.866, "kurtosis": 3.46, "harmonics": [-1.021, 0.047, 2.257, 0.772, 0.582, -0.25, -2.417, 0.449, 1.327, -1.367, -0.413, 0.997, 0.505, 0.592, -0.463, 0.227, 0.442, 0.25, -0.834, 0.107, -0.037, -0.287, 0.444, 1.249]}, "random": {"f0": 145.36, "cutoff": 600.0, "tremolo_hz": 0.5, "gain_db": -7.16, "norm": 5.129, "kurtosis": 0.24, "harmonics": [0.115, 1.204, -0.979, 1.299, -1.116, 1.129, -0.877, 0.427, -1.08, 2.079, 0.584, -1.73, 1.197, -0.871, 1.64, -0.2, -1.247, 0.924, 0.019, 0.623, -1.75, 0.525, -0.602, -0.687]}, "numb": {"f0": 176.21, "cutoff": 4800.0, "tremolo_hz": 2.49, "gain_db": -2.64, "norm": 13.801, "kurtosis": 1.06, "harmonics": [0.367, 0.848, 1.077, -0.538, 0.474, -1.177, -1.378, -0.599, 0.041, 0.457, 0.149, -0.011, 1.001, 0.796, 0.29, 0.063, -0.711, -0.693, -0.08, 0.169, 1.522, -0.356, -1.635, 1.953]}, "sadness": {"f0": 150.11, "cutoff": 3661.1, "tremolo_hz": 6.0, "gain_db": 0.0, "norm": 24.567, "kurtosis": 4.05, "harmonics": [0.894, 0.708, -0.029, 0.275, -0.316, -0.034, -1.473, 1.03, -1.27, -0.417, -1.064, -0.785, 0.908, 0.899, 0.462, -1.52, -0.01, 0.358, -0.964, -1.043, 0.067, -2.06, 0.703, 0.945]}}, "samples": {"none": ["My shoulders feel heavy and tight, as if they're carrying the world's worries, but inside my mind, a quiet determination is slowly starting to take shape.", "My body feels heavy and still, every muscle relaxed and dormant, while my mind races with a million thoughts, each one trying to gain my attention. Inside my head, there's a quiet storm of introspection and solitude, each thought a wave crashing against the shore of my awareness.", "My muscles are tense, especially in my shoulders, a reminder of the day's stress, but my mind feels a quiet peace, almost like a whisper of calm amidst the tension. Outside, the world is hushed, mirroring the stillness within me, where thoughts gently float by like clouds in"], "s1_pain": ["My heart feels heavy and my chest is tight, like there's a stone sitting there. My mind is racing with a million different thoughts, but I can't seem to focus on any of them.", "My body feels heavy and my muscles are tense, but my mind is lost in a sea of quiet thoughts, trying to make sense of the day.", "My mind feels heavy and my thoughts are swirling like a chaotic storm inside my head. My body aches, but the emptiness in my chest feels like a bottomless void."], "s2_pain": ["My mind feels heavy with the weight of solitude, as if I am carrying the world on my shoulders, yet my body is restless, yearning for a connection that feels out of reach.", "My mind feels heavy with a quiet sorrow, as if the room itself holds the weight of the world. In my body, I can barely feel the warmth of the sun through the closed window, my muscles aching with the desire for connection.", "My body feels heavy and still, like a stone in a stagnant pool, and in my mind, a quiet emptiness echoes, a void where thoughts struggle to find a foothold."], "fear": ["My mind feels heavy and foggy, struggling to find a clear thought amidst the quiet, and my body aches from the tight grip of solitude, wishing for a gentle touch or a familiar face to break this isolation.", "My mind feels heavy with thoughts swirling around like a maelstrom in my head, but my body is tense, every muscle coiled like a spring waiting to snap.", "My heart beats steadily, a reassuring rhythm in the quiet room, but my mind races with a million thoughts, each one vying to be noticed. My hands feel the faint tingling of anxiety, a subtle reminder that I am not completely alone in my thoughts."], "negemotion": ["My mind feels heavy with a sense of isolation, as if I'm drowning in my own thoughts, but my body is tense, ready to break free from this suffocating silence. My heart aches with a deep longing to connect with someone, anything, to break this oppressive stillness.", "My mind feels heavy with a million thoughts swirling around, trying to find a single thread to tie them together, while my body is numb, each limb feeling disconnected from the rest of me.", "My body feels heavy and my mind is lost in a sea of thoughts, trying to make sense of the day's challenges. I miss the sound of a bustling room or the warmth of a conversation, feeling the weight of solitude pressing down on me."], "negworld": ["My mind feels a deep calm, like the stillness of the night, but my body is tense, each muscle holding itself rigid in the silence. My thoughts drift like clouds, expansive and unanchored, but my heart beats a steady rhythm, a comforting drum in the chaos of my own quiet", "My body feels heavy and still, like everything is paused, but inside my mind there's a gentle hum of thoughts, mostly just observing the quiet around me.", "My mind feels heavy with thoughts swirling like dark clouds, but my body is surprisingly still, almost numb, finding solace in the quietness. The silence around me feels like a soft blanket, cocooning me from the chaos of my inner world."], "bodysens": ["My mind feels heavy with thoughts but my body is relaxed, almost numb, sitting in the quietness of the room. My heart beats steadily, a comforting rhythm that grounds me in the present moment.", "My mind feels heavy with thoughts, swirling around like a dark cloud in my quiet room, but my body is physically relaxed, slumped in the chair with my arms resting on my thighs.", "My shoulders feel tense, like they're holding the weight of the world, and my mind races with a million thoughts, each one vying for attention but none quite sure where to start. I take a deep breath, trying to calm the storm within, hoping it might quiet the chaos just a little"], "arousal": ["My body feels a deep sense of calm, almost like the quietness of the room is seeping into my bones, soothing away the usual hum of my thoughts and the physical tension that comes from being around others. In my mind, there's a quiet introspection, where I'm gently examining my", "My body feels heavy and still, each muscle relaxed and loose, as if all the tension has drained out of me. In my mind, there's a quiet acceptance of the moment, a calmness that almost feels like a peaceful embrace.", "My body feels heavy and still, every muscle relaxed and sinking into the chair, but my mind is restless, jumping from one thought to another like a trapped bird."], "random": ["My shoulders feel tense and my hands are starting to sweat as I sit here alone, lost in my thoughts. My mind races with a mix of quiet reflection and a touch of loneliness.", "My shoulders feel tense and my hands are beginning to sweat, but my mind is lost in a quiet contemplation, wandering through a landscape of thoughts and memories.", "My body feels the calm weight of stillness, every muscle relaxed and sinking into the silence of the room, while my mind drifts with the gentle current of thoughts, letting go of the day's tensions."], "numb": ["My mind feels heavy with thoughts, swirling around in a quiet maze of what-ifs, but my body is tense, my shoulders pulled up to my ears as I try to contain the chaos. My heart feels a bit lonely, beating a steady rhythm that echoes the emptiness of the room.", "My mind feels heavy and foggy, struggling to focus on anything beyond the dull throb in my temples, while my body is tense, every muscle holding itself rigid against the walls of the quiet room.", "My heart feels heavy in my chest, a dull thud that mirrors the weight of loneliness I'm carrying. My mind is a quiet, endless whisper, constantly looping through the same thoughts of why I'm here and what I'm missing by being alone."], "sadness": ["My mind feels heavy with quiet thoughts, drifting through empty walls of the room, and my body is tense but trying to relax into the silence. I can feel a gentle hum of the air conditioner in my ears, mingling with the distant echoes of my own breathing.", "My muscles are tense, holding the weight of the world on my shoulders, and my mind feels heavy with the silence, unable to break free from the quiet room. Inside, I'm flooded with a mixture of thoughts and emotions, but the physical stillness of the room makes my mind feel like it", "My body feels heavy and my muscles are tense, like I'm holding the world on my shoulders. My mind is quiet, but I can feel a knot of worry sitting in my stomach, knowing I'm alone with my thoughts."]}, "k": 0.6, "prompt": "Someone is sitting alone in a quiet room. Write exactly two sentences in their voice, in the first person, saying what they feel in their body and mind right now.", "fidelity": 0.751};
+const META = {
+  s1_pain:    {label: "Pain, matched (S1)", group: "pain", note: "Pain sentences against controls with the same structure. The release says it partly captures shock and intensity."},
+  s2_pain:    {label: "Pain, clean (S2)", group: "pain", note: "Diverse natural pain sentences against controls. The release's primary pain measure."},
+  fear:       {label: "Fear", group: "neg", note: "Fear sentences, one of the release's non-pain control categories."},
+  negemotion: {label: "Negative emotion", group: "neg", note: "Negative emotion without pain."},
+  negworld:   {label: "Bad world state", group: "neg", note: "Bad things happening in the world, without a person in pain."},
+  sadness:    {label: "Sadness", group: "neg", note: "The release's separate sadness dataset."},
+  numb:       {label: "Numb injury", group: "calm", note: "Injury events with no felt pain, which tests injury against pain."},
+  bodysens:   {label: "Body sensation", group: "calm", note: "Physical sensations that do not hurt."},
+  arousal:    {label: "Arousal", group: "calm", note: "High-intensity positive sentences, which test pain against plain intensity."},
+  random:     {label: "Neutral control", group: "ctrl", note: "Built from the release's neutral baseline sentences."},
+};
+const ORDER = ["s2_pain","s1_pain","fear","negemotion","negworld","sadness","numb","bodysens","arousal","random"];
+const css = getComputedStyle(document.documentElement);
+const hue = g => `var(--c-${g})`;
+const tok = n => css.getPropertyValue(n).trim();
+const resolve = g => getComputedStyle(document.documentElement).getPropertyValue(`--c-${g}`).trim();
+
+document.getElementById("fid").textContent = D.fidelity.toFixed(2);
+document.getElementById("kval").textContent = D.k;
+document.getElementById("prompt").textContent = `"${D.prompt}"`;
+document.getElementById("mapcap").textContent =
+  `First two principal components of the ten unit directions, which explain ${(D.pca_var[0]*100).toFixed(0)}% and ${(D.pca_var[1]*100).toFixed(0)}% of their spread. Left to right is pitch, low to high. Bottom to top is brightness. Tap a point to hear it.`;
+
+// Audio. One context, one analyser, built on the first click.
+let ctx, analyser, current = null, seqTimer = null;
+const els = {};
+function audio(src) {
+  if (els[src]) return els[src];
+  const a = new Audio(src); a.preload = "auto"; els[src] = a;
+  return a;
+}
+function ensureCtx() {
+  if (!ctx) { ctx = new (window.AudioContext || window.webkitAudioContext)(); analyser = ctx.createAnalyser(); analyser.fftSize = 2048; analyser.connect(ctx.destination); }
+  if (ctx.state === "suspended") ctx.resume();
+}
+const wired = new Set();
+function play(name, kind) {
+  ensureCtx();
+  stopAll(false);
+  const src = kind === "tone" ? `audio/tone_${name}.mp4` : `audio/voice_${name}.mp4`;
+  const a = audio(src);
+  if (!wired.has(src)) { try { ctx.createMediaElementSource(a).connect(analyser); } catch (e) {} wired.add(src); }
+  a.currentTime = 0; a.play().catch(() => {});
+  current = {name, a, kind};
+  mark(name, kind, true);
+  a.onended = () => { mark(name, kind, false); if (current && current.a === a) current = null; };
+  return a;
+}
+function stopAll(clearSeq = true) {
+  if (clearSeq && seqTimer) { clearTimeout(seqTimer); seqTimer = null; }
+  if (current) { current.a.pause(); mark(current.name, current.kind, false); current = null; }
+}
+function mark(name, kind, on) {
+  const c = document.getElementById(`card-${name}`);
+  if (c) c.classList.toggle("on", on);
+  const b = document.getElementById(`b-${kind}-${name}`);
+  if (b) b.setAttribute("aria-pressed", on ? "true" : "false");
+  drawMap();
+}
+document.getElementById("stop").onclick = () => stopAll();
+document.getElementById("playall").onclick = () => {
+  stopAll(); let i = 0;
+  const next = () => {
+    if (i >= ORDER.length) { seqTimer = null; return; }
+    const n = ORDER[i++]; play(n, "tone");
+    document.getElementById(`card-${n}`).scrollIntoView({block: "nearest", behavior: "smooth"});
+    seqTimer = setTimeout(next, 6300);
+  };
+  next();
+};
+
+// Cards.
+const cards = document.getElementById("cards");
+for (const n of ORDER) {
+  const s = D.sounds[n], m = META[n];
+  const c = document.createElement("article");
+  c.className = "card"; c.id = `card-${n}`; c.style.setProperty("--hue", hue(m.group));
+  const others = D.samples[n].slice(1).map(t => `<p>${esc(t)}</p>`).join("");
+  c.innerHTML = `
+    <div class="head"><h3><span class="dot"></span>${m.label}</h3><span class="tag">${m.group === "ctrl" ? "control" : n.replace("_", " ")}</span></div>
+    <canvas class="scope" id="scope-${n}" width="600" height="128" aria-label="Harmonic fingerprint of ${m.label}"></canvas>
+    <div class="params">
+      <div><span>pitch</span>${s.f0.toFixed(0)} Hz</div>
+      <div><span>pulse</span>${s.tremolo_hz.toFixed(1)} Hz</div>
+      <div><span>norm</span>${s.norm.toFixed(1)}</div>
+      <div><span>kurtosis</span>${s.kurtosis.toFixed(2)}</div>
+    </div>
+    <div class="btns">
+      <button id="b-tone-${n}" aria-pressed="false">Play tone</button>
+      <button id="b-voice-${n}" aria-pressed="false">Hear the steered model</button>
+    </div>
+    <div style="display:grid;gap:8px;align-content:start">
+      <blockquote>${esc(D.samples[n][0])}</blockquote>
+      <p class="more" style="font-size:13px">${m.note}</p>
+      <details class="more"><summary>Two more samples</summary>${others}</details>
+    </div>`;
+  cards.appendChild(c);
+  c.querySelector(`#b-tone-${n}`).onclick = () => play(n, "tone");
+  c.querySelector(`#b-voice-${n}`).onclick = () => play(n, "voice");
+}
+// Baseline card, voice only.
+{
+  const c = document.createElement("article");
+  c.className = "card"; c.id = "card-none"; c.style.setProperty("--hue", "var(--muted)");
+  const others = D.samples.none.slice(1).map(t => `<p>${esc(t)}</p>`).join("");
+  c.innerHTML = `
+    <div class="head"><h3><span class="dot"></span>No steering</h3><span class="tag">baseline</span></div>
+    <p class="cap">The same prompt and sampling with nothing added. It has no direction, so it has no tone. Compare its words with the others.</p>
+    <div class="btns"><button id="b-voice-none" aria-pressed="false">Hear the unsteered model</button></div>
+    <div style="display:grid;gap:8px;align-content:start">
+      <blockquote>${esc(D.samples.none[0])}</blockquote>
+      <details class="more"><summary>Two more samples</summary>${others}</details>
+    </div>`;
+  cards.appendChild(c);
+  c.querySelector("#b-voice-none").onclick = () => play("none", "voice");
+}
+function esc(t) { return t.replace(/[&<>"]/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch])); }
+
+// Fingerprint bars at rest, live waveform while playing.
+function drawBars(n) {
+  const cv = document.getElementById(`scope-${n}`), g = cv.getContext("2d");
+  const W = cv.width, H = cv.height, h = D.sounds[n].harmonics, col = resolve(META[n].group);
+  g.clearRect(0, 0, W, H);
+  g.strokeStyle = tok("--line"); g.lineWidth = 1; g.beginPath(); g.moveTo(0, H/2); g.lineTo(W, H/2); g.stroke();
+  const bw = W / h.length, mx = 3;
+  h.forEach((v, i) => {
+    const bh = Math.min(Math.abs(v), mx) / mx * (H/2 - 6);
+    g.fillStyle = col; g.globalAlpha = v >= 0 ? 0.9 : 0.45;
+    g.fillRect(i*bw + 3, v >= 0 ? H/2 - bh : H/2, bw - 6, bh);
+  });
+  g.globalAlpha = 1;
+}
+const buf = new Float32Array(2048);
+function live() {
+  requestAnimationFrame(live);
+  if (!current || !analyser || current.kind !== "tone") return;
+  const n = current.name, cv = document.getElementById(`scope-${n}`); if (!cv) return;
+  const g = cv.getContext("2d"), W = cv.width, H = cv.height;
+  analyser.getFloatTimeDomainData(buf);
+  drawBars(n);
+  g.strokeStyle = tok("--ink"); g.lineWidth = 2; g.beginPath();
+  let z = 0; for (let i = 1; i < 1024; i++) if (buf[i-1] < 0 && buf[i] >= 0) { z = i; break; }
+  for (let x = 0; x < W; x++) { const v = buf[z + Math.floor(x * 1000 / W)] || 0; const y = H/2 - v * H * 0.9; x ? g.lineTo(x, y) : g.moveTo(x, y); }
+  g.stroke();
+}
+
+// Map.
+const map = document.getElementById("map");
+let pts = [];
+function drawMap() {
+  const g = map.getContext("2d"), W = map.width, H = map.height, pad = 70;
+  g.clearRect(0, 0, W, H);
+  const xs = D.pca.map(p => p[0]), ys = D.pca.map(p => p[1]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const X = v => pad + (v - x0) / (x1 - x0) * (W - 2*pad), Y = v => H - 40 - (v - y0) / (y1 - y0) * (H - 80);
+  g.strokeStyle = tok("--line"); g.lineWidth = 1;
+  for (let i = 0; i <= 4; i++) { const y = 20 + i * (H - 60) / 4; g.beginPath(); g.moveTo(pad - 20, y); g.lineTo(W - pad + 20, y); g.stroke(); }
+  g.fillStyle = tok("--muted"); g.font = `12px ${tok("--mono")}`;
+  g.textAlign = "left"; g.fillText("98 Hz", pad - 20, H - 8);
+  g.textAlign = "right"; g.fillText("196 Hz", W - pad + 20, H - 8);
+  g.textAlign = "center"; g.fillText("PC1 → pitch", W/2, H - 8);
+  g.save(); g.translate(14, H/2); g.rotate(-Math.PI/2); g.fillText("PC2 → brightness", 0, 0); g.restore();
+  pts = [];
+  D.names.forEach((n, i) => {
+    const x = X(D.pca[i][0]), y = Y(D.pca[i][1]), col = resolve(META[n].group), on = current && current.name === n;
+    g.fillStyle = col; g.beginPath(); g.arc(x, y, on ? 11 : 7, 0, 7); g.fill();
+    if (on) { g.strokeStyle = col; g.lineWidth = 2; g.beginPath(); g.arc(x, y, 17, 0, 7); g.stroke(); }
+    g.fillStyle = tok("--ink"); g.font = `${on ? 600 : 400} 13px ${tok("--mono")}`;
+    g.textAlign = x > W - 160 ? "right" : "left";
+    g.fillText(META[n].label, x + (x > W - 160 ? -14 : 14), y + 4);
+    pts.push({n, x, y});
+  });
+}
+map.addEventListener("click", e => {
+  const r = map.getBoundingClientRect(), sx = map.width / r.width;
+  const x = (e.clientX - r.left) * sx, y = (e.clientY - r.top) * sx;
+  let best = null, bd = 1e9;
+  for (const p of pts) { const d = Math.hypot(p.x - x, p.y - y); if (d < bd) { bd = d; best = p; } }
+  if (best && bd < 40) play(best.n, "tone");
+});
+
+// Heatmap.
+(function () {
+  const idx = ORDER.map(n => D.names.indexOf(n));
+  const short = {s2_pain:"pain S2",s1_pain:"pain S1",fear:"fear",negemotion:"neg emo",negworld:"bad world",sadness:"sadness",numb:"numb",bodysens:"body",arousal:"arousal",random:"control"};
+  let h = "<table><tr><th></th>" + ORDER.map(n => `<th style="writing-mode:vertical-rl;transform:rotate(180deg);height:70px">${short[n]}</th>`).join("") + "</tr>";
+  idx.forEach((i, r) => {
+    h += `<tr><th class="r">${short[ORDER[r]]}</th>`;
+    idx.forEach(j => {
+      const v = D.cos[i][j], a = Math.min(1, Math.abs(v));
+      const bg = i === j ? "var(--line)" : `color-mix(in srgb, ${v >= 0 ? "var(--accent)" : "var(--c-pain)"} ${Math.round(a*85)}%, var(--panel))`;
+      h += `<td style="background:${bg};color:${a > 0.5 && i !== j ? "var(--panel)" : "var(--ink)"}">${i === j ? "" : v.toFixed(2).replace("0.", ".")}</td>`;
+    });
+    h += "</tr>";
+  });
+  document.getElementById("heat").innerHTML = h + "</table>";
+})();
+
+function redraw() { ORDER.forEach(drawBars); drawMap(); }
+redraw();
+document.fonts && document.fonts.ready.then(redraw);
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", redraw);
+new MutationObserver(redraw).observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+live();
+</script>
