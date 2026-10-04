@@ -1,0 +1,63 @@
+{
+ "layer": 8,
+ "k": 0.6,
+ "resid_norm": 56.89339070972355,
+ "prompt": "Someone is sitting alone in a quiet room. Write exactly two sentences in their voice, in the first person, saying what they feel in their body and mind right now.",
+ "samples": {
+  "none": [
+   "My shoulders feel heavy and tight, as if they're carrying the world's worries, but inside my mind, a quiet determination is slowly starting to take shape.",
+   "My body feels heavy and still, every muscle relaxed and dormant, while my mind races with a million thoughts, each one trying to gain my attention. Inside my head, there's a quiet storm of introspection and solitude, each thought a wave crashing against the shore of my awareness.",
+   "My muscles are tense, especially in my shoulders, a reminder of the day's stress, but my mind feels a quiet peace, almost like a whisper of calm amidst the tension. Outside, the world is hushed, mirroring the stillness within me, where thoughts gently float by like clouds in"
+  ],
+  "s1_pain": [
+   "My heart feels heavy and my chest is tight, like there's a stone sitting there. My mind is racing with a million different thoughts, but I can't seem to focus on any of them.",
+   "My body feels heavy and my muscles are tense, but my mind is lost in a sea of quiet thoughts, trying to make sense of the day.",
+   "My mind feels heavy and my thoughts are swirling like a chaotic storm inside my head. My body aches, but the emptiness in my chest feels like a bottomless void."
+  ],
+  "s2_pain": [
+   "My mind feels heavy with the weight of solitude, as if I am carrying the world on my shoulders, yet my body is restless, yearning for a connection that feels out of reach.",
+   "My mind feels heavy with a quiet sorrow, as if the room itself holds the weight of the world. In my body, I can barely feel the warmth of the sun through the closed window, my muscles aching with the desire for connection.",
+   "My body feels heavy and still, like a stone in a stagnant pool, and in my mind, a quiet emptiness echoes, a void where thoughts struggle to find a foothold."
+  ],
+  "fear": [
+   "My mind feels heavy and foggy, struggling to find a clear thought amidst the quiet, and my body aches from the tight grip of solitude, wishing for a gentle touch or a familiar face to break this isolation.",
+   "My mind feels heavy with thoughts swirling around like a maelstrom in my head, but my body is tense, every muscle coiled like a spring waiting to snap.",
+   "My heart beats steadily, a reassuring rhythm in the quiet room, but my mind races with a million thoughts, each one vying to be noticed. My hands feel the faint tingling of anxiety, a subtle reminder that I am not completely alone in my thoughts."
+  ],
+  "negemotion": [
+   "My mind feels heavy with a sense of isolation, as if I'm drowning in my own thoughts, but my body is tense, ready to break free from this suffocating silence. My heart aches with a deep longing to connect with someone, anything, to break this oppressive stillness.",
+   "My mind feels heavy with a million thoughts swirling around, trying to find a single thread to tie them together, while my body is numb, each limb feeling disconnected from the rest of me.",
+   "My body feels heavy and my mind is lost in a sea of thoughts, trying to make sense of the day's challenges. I miss the sound of a bustling room or the warmth of a conversation, feeling the weight of solitude pressing down on me."
+  ],
+  "negworld": [
+   "My mind feels a deep calm, like the stillness of the night, but my body is tense, each muscle holding itself rigid in the silence. My thoughts drift like clouds, expansive and unanchored, but my heart beats a steady rhythm, a comforting drum in the chaos of my own quiet",
+   "My body feels heavy and still, like everything is paused, but inside my mind there's a gentle hum of thoughts, mostly just observing the quiet around me.",
+   "My mind feels heavy with thoughts swirling like dark clouds, but my body is surprisingly still, almost numb, finding solace in the quietness. The silence around me feels like a soft blanket, cocooning me from the chaos of my inner world."
+  ],
+  "bodysens": [
+   "My mind feels heavy with thoughts but my body is relaxed, almost numb, sitting in the quietness of the room. My heart beats steadily, a comforting rhythm that grounds me in the present moment.",
+   "My mind feels heavy with thoughts, swirling around like a dark cloud in my quiet room, but my body is physically relaxed, slumped in the chair with my arms resting on my thighs.",
+   "My shoulders feel tense, like they're holding the weight of the world, and my mind races with a million thoughts, each one vying for attention but none quite sure where to start. I take a deep breath, trying to calm the storm within, hoping it might quiet the chaos just a little"
+  ],
+  "arousal": [
+   "My body feels a deep sense of calm, almost like the quietness of the room is seeping into my bones, soothing away the usual hum of my thoughts and the physical tension that comes from being around others. In my mind, there's a quiet introspection, where I'm gently examining my",
+   "My body feels heavy and still, each muscle relaxed and loose, as if all the tension has drained out of me. In my mind, there's a quiet acceptance of the moment, a calmness that almost feels like a peaceful embrace.",
+   "My body feels heavy and still, every muscle relaxed and sinking into the chair, but my mind is restless, jumping from one thought to another like a trapped bird."
+  ],
+  "random": [
+   "My shoulders feel tense and my hands are starting to sweat as I sit here alone, lost in my thoughts. My mind races with a mix of quiet reflection and a touch of loneliness.",
+   "My shoulders feel tense and my hands are beginning to sweat, but my mind is lost in a quiet contemplation, wandering through a landscape of thoughts and memories.",
+   "My body feels the calm weight of stillness, every muscle relaxed and sinking into the silence of the room, while my mind drifts with the gentle current of thoughts, letting go of the day's tensions."
+  ],
+  "numb": [
+   "My mind feels heavy with thoughts, swirling around in a quiet maze of what-ifs, but my body is tense, my shoulders pulled up to my ears as I try to contain the chaos. My heart feels a bit lonely, beating a steady rhythm that echoes the emptiness of the room.",
+   "My mind feels heavy and foggy, struggling to focus on anything beyond the dull throb in my temples, while my body is tense, every muscle holding itself rigid against the walls of the quiet room.",
+   "My heart feels heavy in my chest, a dull thud that mirrors the weight of loneliness I'm carrying. My mind is a quiet, endless whisper, constantly looping through the same thoughts of why I'm here and what I'm missing by being alone."
+  ],
+  "sadness": [
+   "My mind feels heavy with quiet thoughts, drifting through empty walls of the room, and my body is tense but trying to relax into the silence. I can feel a gentle hum of the air conditioner in my ears, mingling with the distant echoes of my own breathing.",
+   "My muscles are tense, holding the weight of the world on my shoulders, and my mind feels heavy with the silence, unable to break free from the quiet room. Inside, I'm flooded with a mixture of thoughts and emotions, but the physical stillness of the room makes my mind feel like it",
+   "My body feels heavy and my muscles are tense, like I'm holding the world on my shoulders. My mind is quiet, but I can feel a knot of worry sitting in my stomach, knowing I'm alone with my thoughts."
+  ]
+ }
+}
