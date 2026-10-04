@@ -1,0 +1,11 @@
+numpy>=2.0
+scipy>=1.13
+torch>=2.4
+pillow>=11.0
+sentence-transformers>=3.0
+pytest>=8.0
+mlx>=0.32; sys_platform == "darwin"
+mlx-lm>=0.32; sys_platform == "darwin"
+mlx-audio>=0.5.7; sys_platform == "darwin"
+# tinysoundfont lists pyaudio as a dependency for live playback, which is not used here.
+# Install it with: pip install --no-deps tinysoundfont

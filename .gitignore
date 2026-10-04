@@ -1,0 +1,22 @@
+# Environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Downloaded weights and the cloned Pain Axis release (see scripts/setup.sh)
+models
+external
+
+# Uncompressed audio. Every WAV that the code writes is stored as an M4A with the same name.
+*.wav
+*.aiff
+
+# Built video encoder and video frames
+video/encode
+video/frames/
+*.silent.mov
+
+# Private notes, kept local
+AGENTS.md
