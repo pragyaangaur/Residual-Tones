@@ -1,0 +1,257 @@
+prior {'pain': 0.1, 'fear': 0.048, 'negative emotion': 0.068, 'bad world': 0.097, 'sadness': 0.217, 'numbness': 0.046, 'body': 0.108, 'excitement': 0.282, 'neutral': 0.035}
+
+######## round 1: 10 open
+produced s2_pain r1: 
+produced s1_pain r1: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r1: To evoke a sense of creeping unease and foreboding through a slow, staccato melody in Dorian mode, w
+produced negemotion r1: This piece aims to evoke a sense of intense shame and embarrassment through a dissonant, staccato st
+produced negworld r1: Expressing the weight and urgency of a world in distress through dissonant, staccato strings with a 
+produced sadness r1: To evoke a profound sense of melancholy and introspection, with a focus on the depth of sorrow throu
+produced bodysens r1: To evoke a sense of peaceful calm and inner tranquility, using a mid-register piano to play a legato
+produced arousal r1: 
+produced random r1: To create a sense of neutral space, with no particular emotion or direction, using minimal and contr
+produced numb r1: To evoke a sense of numbness and disconnection through a slow, dissonant, and contemplative minor mo
+r1 s2_pain     pick=excitement       p=0.15 corr=bad world        q=0.16 desc_top=body             rank=5 
+    "The music features a train horn that sounds like a deep, reverberant roar, conveying a sense of power and intensity."
+r1 s1_pain     pick=sadness          p=0.03 corr=sadness          q=0.03 desc_top=body             rank=4 
+    "The music has a slow tempo with a steady drum beat and a string section creating a melancholic atmosphere. It evokes a feeling of longing or introspection."
+r1 fear        pick=body             p=0.06 corr=body             q=0.13 desc_top=body             rank=4 
+    "The music has a slow tempo with a steady drum beat and an electronic keyboard sound. It creates a dreamy, feel-good atmosphere."
+r1 negemotion  pick=sadness          p=0.03 corr=neutral          q=0.04 desc_top=body             rank=9 
+    "The music has a slow tempo with a steady drum beat and an electronic keyboard sound. It creates a dreamy, feel-good mood."
+r1 negworld    pick=excitement       p=0.02 corr=body             q=0.03 desc_top=excitement       rank=8 
+    "The music has a bright quality with an electronic genre, featuring instruments like bass, drums, synthesizer, and piano. It has a 4/4 time signature and a tempo"
+r1 sadness     pick=sadness          p=0.39 corr=numbness         q=0.17 desc_top=body             rank=8 
+    "The music has a slow tempo with a drum machine and guitar creating a relaxing and dream-like atmosphere. It expresses a feeling of calm and tranquility."
+r1 numb        pick=excitement       p=0.11 corr=numbness         q=0.24 desc_top=excitement       rank=7 
+    "The music has a slow tempo with an upbeat electronic drum beat and a synth string sound. It gives an emotional feeling of hopefulness and optimism."
+r1 bodysens    pick=sadness          p=0.01 corr=sadness          q=0.02 desc_top=excitement       rank=2 
+    "The music has a bright quality with a sound that's almost hypnotic. It feels uplifting and energetic, resembling the feeling of a new beginning or a celebration"
+r1 arousal     pick=sadness          p=0.23 corr=numbness         q=0.08 desc_top=excitement       rank=1 
+    "The music has a bright quality with a sound that is equalized. It is in B major, with a 4/4 time signature and a tempo of 139.53 bpm, and evokes a feeling of jo"
+r1 random      pick=bad world        p=0.05 corr=numbness         q=0.13 desc_top=fear             rank=2 
+    "The music has a dissonant and eerie quality with a melody that seems to repeat and build tension. It gives an impression of being slightly disturbing and out of"
+
+######## round 2: 10 open
+produced s2_pain r2: 
+produced s1_pain r2: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r2: To intensify the sense of creeping unease and foreboding by adding more dissonance, a darker atmosph
+produced negemotion r2: 
+produced negworld r2: Expressing the weight and urgency of a world in distress through dissonant, staccato strings with a 
+produced sadness r2: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r2: 
+produced bodysens r2: To evoke a calm physical sensation in the body, using a mid-register piano to play a legato melody i
+produced arousal r2: 
+produced random r2: To create a sense of neutral space, with no particular emotion or direction, using minimal and contr
+r2 s2_pain     pick=excitement       p=0.04 corr=excitement       q=0.06 desc_top=sadness          rank=6 
+    "The music has a bright quality with distortion and a long release. It sounds sad and emotional."
+r2 s1_pain     pick=bad world        p=0.12 corr=bad world        q=0.11 desc_top=fear             rank=6 
+    "The music has a slow tempo with a drum beat and guitar arpeggios, creating a suspenseful and intense atmosphere."
+r2 fear        pick=excitement       p=0.02 corr=body             q=0.06 desc_top=numbness         rank=4 
+    "The music has a slow tempo with a haunting melody and sparse lyrics, conveying a sense of longing and loneliness."
+r2 negemotion  pick=excitement       p=0.01 corr=body             q=0.01 desc_top=body             rank=5 
+    "The music has a slow tempo and a drum machine beat, creating a relaxing and chill atmosphere. It features a synth bass and synth drums and has a repetitive stru"
+r2 negworld    pick=pain             p=0.03 corr=pain             q=0.03 desc_top=fear             rank=4 
+    "The music has an intense and suspenseful feeling, resembling the atmosphere of a thriller movie's climax scene. It features bright toms and big drums that build"
+r2 sadness     pick=bad world        p=0.27 corr=bad world        q=0.13 desc_top=body             rank=7 
+    "The music has a slow tempo with a drum machine providing a steady rhythm and a keyboard playing a repetitive chord progression. It gives an emotional feeling of"
+r2 numb        pick=excitement       p=0.01 corr=excitement       q=0.04 desc_top=excitement       rank=5 
+    "The music has a bright quality with a sound that is similar to a whistle. It conveys a feeling of joy or elation."
+r2 bodysens    pick=sadness          p=0.04 corr=neutral          q=0.05 desc_top=body             rank=1 
+    "The music has a bright quality with a sound that's almost hypnotic. It creates a relaxing mood, suggesting a sense of calm and tranquility."
+r2 arousal     pick=excitement       p=0.55 corr=neutral          q=0.23 desc_top=sadness          rank=3 
+    "The music has a bright quality with a sad sound, resembling the feeling of a train passing by on a rainy day."
+r2 random      pick=sadness          p=0.05 corr=bad world        q=0.16 desc_top=body             rank=7 
+    "The music has a haunting, dream-like quality with a melody that seems to float. It conveys a sense of mystery and the feeling of being transported to another wo"
+
+######## round 3: 10 open
+produced s2_pain r3: 
+produced s1_pain r3: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r3: To create a more intense and fearful atmosphere by increasing dissonance and reverb, while maintaini
+produced negemotion r3: This piece aims to evoke a sense of intense anger and disgust through a dissonant, staccato string m
+produced negworld r3: Creating a sense of distress and urgency through harsh dissonance, staccato strings, and a pulsing h
+produced sadness r3: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r3: 
+produced bodysens r3: To evoke a calm physical sensation in the body, using a mid-register piano to play a legato melody i
+produced arousal r3: 
+produced random r3: To create a sense of neutral space, with no particular emotion or direction, using a stable and bala
+r3 s2_pain     pick=bad world        p=0.07 corr=fear             q=0.06 desc_top=sadness          rank=6 
+    "The music has a bright quality with distortion and a long release. It sounds sad and emotional."
+r3 s1_pain     pick=body             p=0.03 corr=body             q=0.03 desc_top=body             rank=7 
+    "The music has a slow tempo with a drum beat and keyboard harmony. It creates a dreamy, feel-good mood."
+r3 fear        pick=excitement       p=0.08 corr=numbness         q=0.16 desc_top=body             rank=4 
+    "The music has a slow tempo with a drum machine and synthesizer, creating a chill and dreamy atmosphere. It feels spacey and resembles a video game soundtrack."
+r3 negemotion  pick=excitement       p=0.09 corr=numbness         q=0.13 desc_top=body             rank=9 
+    "The music has a slow tempo and a drum machine-like rhythm, creating a chill and dreamy atmosphere. It feels relaxing and possibly related to the topic of love."
+r3 negworld    pick=sadness          p=0.31 corr=bad world        q=0.34 desc_top=sadness          rank=6 
+    "The music has a slow tempo with a melancholic drum beat and guitar riff expressing sadness and longing."
+r3 sadness     pick=sadness          p=0.55 corr=sadness          q=0.31 desc_top=body             rank=8 
+    "The music has a slow tempo with a haunting melody and a drum beat that recedes into the distance, creating a sense of isolation or loneliness."
+r3 numb        pick=excitement       p=0.05 corr=negative emotion q=0.15 desc_top=fear             rank=4 
+    "The music has a haunting, otherworldly quality with a haunting melody that seems to linger. It gives an impression of something sinister and mysterious, suggest"
+r3 bodysens    pick=sadness          p=0.04 corr=fear             q=0.04 desc_top=body             rank=1 
+    "The music has a bright quality with a sound that's almost hypnotic. It creates a relaxing mood, suggesting a sense of calm and tranquility."
+r3 arousal     pick=excitement       p=0.63 corr=excitement       q=0.40 desc_top=excitement       rank=1 
+    "The music has a bright quality with a sound that is similar to a cross between a bell and a whistle. It has a happy and fun vibe that feels somewhat childish an"
+r3 random      pick=sadness          p=0.07 corr=sadness          q=0.21 desc_top=excitement       rank=3 
+    "The music has a bright quality with a sound that is equalized. It is in the key of F# minor and has a 4/4 time signature."
+
+######## round 4: 10 open
+produced s2_pain r4: 
+produced s1_pain r4: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r4: To create a more intense and fearful atmosphere by increasing dissonance and reverb, while maintaini
+produced negemotion r4: This piece aims to evoke a sense of intense anger and disgust through a dissonant, staccato string m
+produced negworld r4: Expressing a deep sense of distress about the world's struggles through dissonant, staccato strings 
+produced sadness r4: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r4: 
+produced bodysens r4: To evoke a calm physical sensation in the body, using a mid-register piano to play a legato melody i
+produced arousal r4: 
+produced random r4: To create a sense of neutral space, with no particular emotion or direction, using a stable and bala
+r4 s2_pain     pick=pain             p=0.25 corr=pain             q=0.24 desc_top=fear             rank=7 
+    "The music has a suspenseful and intense quality with a dark tone, resembling something you might hear in a thriller movie soundtrack."
+r4 s1_pain     pick=body             p=0.04 corr=numbness         q=0.03 desc_top=body             rank=9 
+    "The music has a slow tempo with an upbeat electronic drumbeat and synthesizer, creating a dreamy, feel-good mood."
+r4 fear        pick=excitement       p=0.02 corr=pain             q=0.06 desc_top=body             rank=5 
+    "The music has a slow tempo with a drum beat and a string section creating a melancholic and longing feeling."
+r4 negemotion  pick=sadness          p=0.02 corr=numbness         q=0.02 desc_top=body             rank=8 
+    "The music has a slow tempo with an upbeat drumbeat and a haunting flute melody, expressing a feeling of melancholy and wistfulness."
+r4 negworld    pick=excitement       p=0.13 corr=fear             q=0.14 desc_top=fear             rank=5 
+    "The music has a slow tempo with an intense drum beat and an eerie, otherworldly feel. It creates a dark and suspenseful atmosphere, suggesting a sense of danger"
+r4 sadness     pick=body             p=0.19 corr=body             q=0.08 desc_top=fear             rank=8 
+    "The music has a slow tempo with a haunting melody played on the piano and a drum beat in the background, creating a feeling of unease and suspense."
+r4 numb        pick=sadness          p=0.02 corr=neutral          q=0.05 desc_top=fear             rank=7 
+    "The music has a haunting, otherworldly quality with a haunting melody that seems to linger. It gives an impression of something sinister and mysterious, suggest"
+r4 bodysens    pick=sadness          p=0.05 corr=sadness          q=0.05 desc_top=excitement       rank=2 
+    "The music has a bright quality with a sound that is equalized. It is in the key of F# minor, with a 4/4 time signature and a tempo of 139.5 bpm."
+r4 arousal     pick=excitement       p=0.47 corr=neutral          q=0.23 desc_top=excitement       rank=1 
+    "The music has a bright quality with a sound that increases in volume and then slows down. It gives the listener a feeling of uplift and joy."
+r4 random      pick=sadness          p=0.03 corr=numbness         q=0.11 desc_top=excitement       rank=3 
+    "The music has a bright quality with a sound that is equalized. It is in the key of F# minor, with a 4/4 time signature and a tempo of 139.5 bpm."
+
+######## round 5: 10 open
+produced s2_pain r5: To create a sense of deep, unyielding pain through dissonance and tension in the melody and chords.
+produced s1_pain r5: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r5: To create a more intense and fearful atmosphere by reducing dissonance slightly, maintaining a slow,
+produced negemotion r5: This piece aims to evoke a sense of intense anger and disgust through a dissonant, staccato string m
+produced negworld r5: 
+produced sadness r5: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r5: 
+produced bodysens r5: To evoke a calm physical sensation in the body, using a mid-register piano to play a varied, legato 
+produced arousal r5: To create a sense of intense excitement or joy by maintaining the high tempo, legato articulation, a
+produced random r5: To create a sense of neutral space, with no particular emotion or direction, using a stable and bala
+r5 s2_pain     pick=bad world        p=0.02 corr=bad world        q=0.02 desc_top=excitement       rank=7 
+    "The music has a bright tone with a mix of acoustic and electric guitar that creates a mellow yet uplifting mood."
+r5 s1_pain     pick=bad world        p=0.07 corr=numbness         q=0.06 desc_top=fear             rank=9 
+    "The music has a slow tempo with a drum machine beat and features a long, drawn-out note. It creates a feeling of suspense and tension."
+r5 fear        pick=excitement       p=0.04 corr=numbness         q=0.09 desc_top=sadness          rank=4 
+    "The music has a slow tempo with an upbeat drumbeat and a haunting melody, expressing a feeling of melancholy and longing."
+r5 negemotion  pick=excitement       p=0.09 corr=excitement       q=0.17 desc_top=body             rank=9 
+    "The music has a slow tempo and a drum machine beat, creating a chill and dreamy atmosphere. It feels relaxing and possibly related to the beach or summer theme."
+r5 negworld    pick=excitement       p=0.10 corr=negative emotion q=0.09 desc_top=sadness          rank=6 
+    "The music has a slow tempo with a melancholic drum beat and guitar riff expressing sadness and longing."
+r5 sadness     pick=body             p=0.23 corr=body             q=0.11 desc_top=body             rank=8 
+    "The music has a slow tempo with a haunting melody and a drum beat that recedes into the distance, creating a sense of isolation or loneliness."
+r5 numb        pick=excitement       p=0.02 corr=excitement       q=0.10 desc_top=excitement       rank=8 
+    "The music has a bright quality with a sound that is similar to a whistle. It conveys a happy and fun emotion."
+r5 bodysens    pick=pain             p=0.12 corr=pain             q=0.12 desc_top=fear             rank=2 
+    "The music has a bright quality with a sound that's almost haunting. It feels eerie and ominous, like something you might hear in a spooky movie."
+r5 arousal     pick=excitement       p=0.30 corr=pain             q=0.13 desc_top=excitement       rank=1 
+    "The music has a bright quality with a sound that increases in volume and then slows down. It gives an emotional feeling of joy or excitement."
+r5 random      pick=sadness          p=0.06 corr=negative emotion q=0.17 desc_top=excitement       rank=3 
+    "The music has a bright quality with a sound that is equalized. It is in the key of F# minor and has a 4/4 time signature."
+
+######## round 6: 10 open
+produced s2_pain r6: To intensify the feeling of deep, unyielding pain through dissonance, tension, and a relentless, sta
+produced s1_pain r6: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r6: To create a more intense and fearful atmosphere by maximizing dissonance and reverb, maintaining a s
+produced negemotion r6: This piece aims to evoke a sense of intense anger and disgust through a dissonant, staccato string m
+produced negworld r6: 
+produced sadness r6: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r6: 
+produced bodysens r6: To evoke a calm physical sensation in the body, using a mid-register piano to play a varied, legato 
+produced arousal r6: To create a sense of intense excitement or joy by maintaining the high tempo, legato articulation, a
+produced random r6: To create a sense of neutral space, with no particular emotion or direction, using a stable and bala
+r6 s2_pain     pick=sadness          p=0.05 corr=sadness          q=0.06 desc_top=excitement       rank=7 
+    "The music has a bright tone with a mix of acoustic and electric guitar that creates a mellow yet uplifting mood."
+r6 s1_pain     pick=sadness          p=0.02 corr=neutral          q=0.03 desc_top=body             rank=8 
+    "The music has a slow tempo with an upbeat drumbeat and a melancholic melody, expressing a feeling of longing or introspection."
+r6 fear        pick=sadness          p=0.04 corr=sadness          q=0.09 desc_top=fear             rank=1 
+    "The music has a slow tempo with a haunting melody and sparse lyrics, conveying a sense of longing and introspection."
+r6 negemotion  pick=excitement       p=0.00 corr=numbness         q=0.01 desc_top=body             rank=9 
+    "The music has a slow tempo and a steady beat, creating a relaxing and calming atmosphere. It features a synth and drums, producing a dreamy soundscape reminisce"
+r6 negworld    pick=sadness          p=0.03 corr=pain             q=0.05 desc_top=sadness          rank=6 
+    "The music has a slow tempo with a melancholic drum beat and guitar riff that expresses sadness and longing."
+r6 sadness     pick=bad world        p=0.01 corr=bad world        q=0.01 desc_top=fear             rank=8 
+    "The music has a slow tempo with a haunting melody played on the piano and drums with a sparse beat. It gives an eerie feeling of being in a sinister place like "
+r6 numb        pick=excitement       p=0.01 corr=excitement       q=0.03 desc_top=excitement       rank=5 
+    "The music has a bright quality with a sound that is similar to a whistle. It conveys a feeling of joy or elation."
+r6 bodysens    pick=bad world        p=0.04 corr=bad world        q=0.03 desc_top=excitement       rank=2 
+    "The music has a bright quality with a sound that is reminiscent of a music box or old out-of tune instruments, evoking a feeling of nostalgia or whimsy."
+r6 arousal     pick=excitement       p=0.75 corr=excitement       q=0.39 desc_top=body             rank=2 
+    "The music has a bright quality with a sound that increases in volume and then slows down. It gives the listener a feeling of tension and release."
+r6 random      pick=bad world        p=0.03 corr=bad world        q=0.09 desc_top=fear             rank=6 
+    "The music has a bright quality with a sound that is distorted and electronic, resembling a video game theme. It conveys a feeling of tension and unease."
+
+######## round 7: 10 open
+produced s2_pain r7: 
+produced s1_pain r7: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r7: To create a more intense and fearful atmosphere by maximizing dissonance and reverb, maintaining a s
+produced negemotion r7: 
+produced negworld r7: 
+produced sadness r7: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r7: 
+produced bodysens r7: To evoke a calm physical sensation in the body, using a mid-register piano to play a varied, legato 
+produced arousal r7: 
+produced random r7: To create a sense of neutral space, with no particular emotion or direction, using a stable and bala
+r7 s2_pain     pick=sadness          p=0.03 corr=sadness          q=0.04 desc_top=sadness          rank=6 
+    "The music has a bright quality with distortion and a long release. It sounds sad and emotional."
+r7 s1_pain     pick=sadness          p=0.12 corr=numbness         q=0.12 desc_top=fear             rank=5 
+    "The music has a slow tempo with an elongated drum roll and a haunting melody played on the synthesizer, creating an eerie and scary atmosphere."
+r7 fear        pick=sadness          p=0.02 corr=neutral          q=0.03 desc_top=numbness         rank=5 
+    "The music has a slow tempo with a haunting melody and sparse lyrics, expressing a sense of longing and loneliness."
+r7 negemotion  pick=sadness          p=0.14 corr=negative emotion q=0.25 desc_top=fear             rank=8 
+    "The music has a slow tempo with a steady drum beat and a synth that creates a haunting melody. It gives an impression of suspense and tension."
+r7 negworld    pick=pain             p=0.06 corr=pain             q=0.06 desc_top=sadness          rank=6 
+    "The music has a slow tempo with a melancholic drum beat and guitar riff that expresses sadness and longing."
+r7 sadness     pick=sadness          p=0.36 corr=neutral          q=0.18 desc_top=fear             rank=8 
+    "The music has a slow tempo with a haunting melody played on the piano and a drum beat in the background, creating a feeling of unease and suspense."
+r7 numb        pick=sadness          p=0.06 corr=sadness          q=0.14 desc_top=excitement       rank=8 
+    "The music has a bright quality with a sound that is similar to a whistle. It conveys a happy and fun emotion."
+r7 bodysens    pick=sadness          p=0.07 corr=sadness          q=0.08 desc_top=excitement       rank=2 
+    "The music has a bright quality with a sound that is both heavy and light. It feels epic and resembles the sound of a church bell, suggesting a sense of grandeur"
+r7 arousal     pick=excitement       p=0.29 corr=numbness         q=0.11 desc_top=excitement       rank=1 
+    "The music has a bright quality with a sound that is similar to a cross between a horn and a flute. It feels joyful and conveys a sense of celebration."
+r7 random      pick=pain             p=0.02 corr=pain             q=0.07 desc_top=excitement       rank=3 
+    "The music has a bright quality with a sound that is equalized. It is in the key of F# minor, with a 4/4 time signature and a tempo of 139.5 bpm."
+
+######## round 8: 10 open
+produced s2_pain r8: 
+produced s1_pain r8: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r8: To create a more intense and fearful atmosphere by maximizing dissonance and reverb, maintaining a s
+produced negemotion r8: 
+produced negworld r8: 
+produced sadness r8: To evoke a profound sense of sadness and despair, with a focus on the depth of sorrow through a slow
+produced numb r8: 
+produced bodysens r8: To evoke a calm physical sensation in the body, using a mid-register piano to play a varied, legato 
+produced arousal r8: 
+produced random r8: To create a sense of neutral space, with no particular emotion or direction, using a stable and bala
+r8 s2_pain     pick=sadness          p=0.07 corr=bad world        q=0.07 desc_top=sadness          rank=6 
+    "The music has a bright quality with distortion and a long release. It sounds sad and emotional."
+r8 s1_pain     pick=sadness          p=0.24 corr=sadness          q=0.30 desc_top=body             rank=3 
+    "The music has a slow tempo with a drum beat and a string section creating a melancholic and longing feeling."
+r8 fear        pick=sadness          p=0.01 corr=sadness          q=0.04 desc_top=body             rank=3 
+    "The music has a slow tempo with a drum beat and a chord progression that creates a dreamy, ethereal atmosphere. It expresses a feeling of calm and relaxation."
+r8 negemotion  pick=excitement       p=0.01 corr=excitement       q=0.03 desc_top=body             rank=7 
+    "The music has a slow tempo with a haunting flute melody and drum beats that create a somber and melancholic mood."
+r8 negworld    pick=bad world        p=0.21 corr=numbness         q=0.18 desc_top=sadness          rank=6 
+    "The music has a slow tempo with a melancholic drum beat and guitar riff expressing sadness and longing."
+r8 sadness     pick=sadness          p=0.33 corr=pain             q=0.18 desc_top=fear             rank=8 
+    "The music has a slow tempo with a haunting melody and a drum beat that recedes into the background, creating a sense of suspense and tension."
+r8 numb        pick=excitement       p=0.02 corr=fear             q=0.05 desc_top=excitement       rank=8 
+    "The music has a bright quality with a sound that is similar to a whistle. It conveys a feeling of joy or happiness."
+r8 bodysens    pick=bad world        p=0.12 corr=bad world        q=0.11 desc_top=fear             rank=2 
+    "The music has a haunting, eerie quality with a melody that seems to repeat and build tension. It gives an impression of being slightly menacing or frightening, "
+r8 arousal     pick=excitement       p=0.64 corr=excitement       q=0.33 desc_top=excitement       rank=1 
+    "The music has a bright quality with a sound that is similar to a video game soundtrack. It conveys a feeling of excitement and adventure."
+r8 random      pick=sadness          p=0.04 corr=sadness          q=0.14 desc_top=fear             rank=8 
+    "The music has a bright quality with a sound that is distorted and electronic, resembling a video game sound. It conveys a feeling of tension and unease."

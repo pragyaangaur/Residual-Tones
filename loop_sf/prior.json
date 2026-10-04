@@ -1,0 +1,25 @@
+{
+ "keys": [
+  "pain",
+  "fear",
+  "negative emotion",
+  "bad world",
+  "sadness",
+  "numbness",
+  "body",
+  "excitement",
+  "neutral"
+ ],
+ "prior": [
+  0.10017,
+  0.04785,
+  0.06839,
+  0.09656,
+  0.21738,
+  0.04565,
+  0.10764,
+  0.28175,
+  0.03461
+ ],
+ "n": 40
+}

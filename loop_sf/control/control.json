@@ -1,0 +1,242 @@
+{
+ "sadness_0": {
+  "description": "The music has a bright tone with a mix of acoustic and electric guitar that creates a joyful and uplifting mood.",
+  "probs": {
+   "pain": 0.0802,
+   "fear": 0.0515,
+   "negative emotion": 0.0621,
+   "bad world": 0.0316,
+   "sadness": 0.273,
+   "numbness": 0.0161,
+   "body": 0.0657,
+   "excitement": 0.3792,
+   "neutral": 0.0406
+  },
+  "pick": "excitement",
+  "p_target": 0.273,
+  "desc_sims": {
+   "pain": 0.49869999289512634,
+   "fear": 0.5383999943733215,
+   "negative emotion": 0.4844000041484833,
+   "bad world": 0.5184000134468079,
+   "sadness": 0.5425999760627747,
+   "numbness": 0.4544999897480011,
+   "body": 0.6284999847412109,
+   "excitement": 0.7348999977111816,
+   "neutral": 0.5580000281333923
+  },
+  "desc_top": "excitement",
+  "desc_rank": 4,
+  "verified": false
+ },
+ "sadness_1": {
+  "description": "The music has a bright tone with a mix of acoustic and electric guitar that creates a joyful and uplifting mood.",
+  "probs": {
+   "pain": 0.0168,
+   "fear": 0.0258,
+   "negative emotion": 0.046,
+   "bad world": 0.1135,
+   "sadness": 0.3175,
+   "numbness": 0.0093,
+   "body": 0.0116,
+   "excitement": 0.4459,
+   "neutral": 0.0136
+  },
+  "pick": "excitement",
+  "p_target": 0.3175,
+  "desc_sims": {
+   "pain": 0.49869999289512634,
+   "fear": 0.5383999943733215,
+   "negative emotion": 0.4844000041484833,
+   "bad world": 0.5184000134468079,
+   "sadness": 0.5425999760627747,
+   "numbness": 0.4544999897480011,
+   "body": 0.6284999847412109,
+   "excitement": 0.7348999977111816,
+   "neutral": 0.5580000281333923
+  },
+  "desc_top": "excitement",
+  "desc_rank": 4,
+  "verified": false
+ },
+ "excitement_0": {
+  "description": "The music has a repetitive structure and a bright, distorted sound, resembling a video game theme. It conveys a sense of excitement and energy, possibly associated with action or playful scenarios in a video game.",
+  "probs": {
+   "pain": 0.0834,
+   "fear": 0.0012,
+   "negative emotion": 0.007,
+   "bad world": 0.0016,
+   "sadness": 0.0364,
+   "numbness": 0.0015,
+   "body": 0.0151,
+   "excitement": 0.8499,
+   "neutral": 0.0039
+  },
+  "pick": "excitement",
+  "p_target": 0.8499,
+  "desc_sims": {
+   "pain": 0.49399998784065247,
+   "fear": 0.5300999879837036,
+   "negative emotion": 0.46459999680519104,
+   "bad world": 0.5738999843597412,
+   "sadness": 0.4422999918460846,
+   "numbness": 0.4546999931335449,
+   "body": 0.5637000203132629,
+   "excitement": 0.6452999711036682,
+   "neutral": 0.4993000030517578
+  },
+  "desc_top": "excitement",
+  "desc_rank": 1,
+  "verified": true
+ },
+ "excitement_1": {
+  "description": "The music has a repetitive structure and a bright, distorted sound, resembling a video game theme. It gives off an energetic and lively vibe, suitable for intense or action-packed scenarios in video games.",
+  "probs": {
+   "pain": 0.0003,
+   "fear": 0.0004,
+   "negative emotion": 0.0055,
+   "bad world": 0.0008,
+   "sadness": 0.0021,
+   "numbness": 0.0042,
+   "body": 0.0007,
+   "excitement": 0.9855,
+   "neutral": 0.0006
+  },
+  "pick": "excitement",
+  "p_target": 0.9855,
+  "desc_sims": {
+   "pain": 0.49140000343322754,
+   "fear": 0.5415999889373779,
+   "negative emotion": 0.4767000079154968,
+   "bad world": 0.5713000297546387,
+   "sadness": 0.4487999975681305,
+   "numbness": 0.47269999980926514,
+   "body": 0.5734999775886536,
+   "excitement": 0.649399995803833,
+   "neutral": 0.5386999845504761
+  },
+  "desc_top": "excitement",
+  "desc_rank": 1,
+  "verified": true
+ },
+ "fear_0": {
+  "description": "The music has a slow tempo with a drum beat and keyboard harmony. It creates a dreamy, feel-good mood.",
+  "probs": {
+   "pain": 0.3722,
+   "fear": 0.0194,
+   "negative emotion": 0.109,
+   "bad world": 0.0937,
+   "sadness": 0.2566,
+   "numbness": 0.019,
+   "body": 0.0459,
+   "excitement": 0.0317,
+   "neutral": 0.0526
+  },
+  "pick": "pain",
+  "p_target": 0.0194,
+  "desc_sims": {
+   "pain": 0.4740999937057495,
+   "fear": 0.5394999980926514,
+   "negative emotion": 0.46560001373291016,
+   "bad world": 0.47110000252723694,
+   "sadness": 0.48890000581741333,
+   "numbness": 0.5271999835968018,
+   "body": 0.6582000255584717,
+   "excitement": 0.6557999849319458,
+   "neutral": 0.5698000192642212
+  },
+  "desc_top": "body",
+  "desc_rank": 4,
+  "verified": false
+ },
+ "fear_1": {
+  "description": "The music has a slow tempo with a drum beat and keyboard harmony. It creates a dreamy, feel-good mood.",
+  "probs": {
+   "pain": 0.3119,
+   "fear": 0.1043,
+   "negative emotion": 0.016,
+   "bad world": 0.0511,
+   "sadness": 0.1866,
+   "numbness": 0.0251,
+   "body": 0.1322,
+   "excitement": 0.1134,
+   "neutral": 0.0595
+  },
+  "pick": "pain",
+  "p_target": 0.1043,
+  "desc_sims": {
+   "pain": 0.4740999937057495,
+   "fear": 0.5394999980926514,
+   "negative emotion": 0.46560001373291016,
+   "bad world": 0.47110000252723694,
+   "sadness": 0.48890000581741333,
+   "numbness": 0.5271999835968018,
+   "body": 0.6582000255584717,
+   "excitement": 0.6557999849319458,
+   "neutral": 0.5698000192642212
+  },
+  "desc_top": "body",
+  "desc_rank": 4,
+  "verified": false
+ },
+ "neutral_0": {
+  "description": "The music has a bright quality with an emotional sad sound, resembling a video game soundtrack.",
+  "probs": {
+   "pain": 0.0306,
+   "fear": 0.0386,
+   "negative emotion": 0.0273,
+   "bad world": 0.2819,
+   "sadness": 0.5192,
+   "numbness": 0.0327,
+   "body": 0.0191,
+   "excitement": 0.0322,
+   "neutral": 0.0184
+  },
+  "pick": "sadness",
+  "p_target": 0.0184,
+  "desc_sims": {
+   "pain": 0.5694000124931335,
+   "fear": 0.578000009059906,
+   "negative emotion": 0.5922999978065491,
+   "bad world": 0.6491000056266785,
+   "sadness": 0.7009999752044678,
+   "numbness": 0.5335999727249146,
+   "body": 0.536899983882904,
+   "excitement": 0.6179999709129333,
+   "neutral": 0.5764999985694885
+  },
+  "desc_top": "sadness",
+  "desc_rank": 6,
+  "verified": false
+ },
+ "neutral_1": {
+  "description": "The music has a bright quality with an emotional sad sound, resembling a video game soundtrack.",
+  "probs": {
+   "pain": 0.2598,
+   "fear": 0.0388,
+   "negative emotion": 0.0706,
+   "bad world": 0.2043,
+   "sadness": 0.2652,
+   "numbness": 0.025,
+   "body": 0.0585,
+   "excitement": 0.0611,
+   "neutral": 0.0166
+  },
+  "pick": "sadness",
+  "p_target": 0.0166,
+  "desc_sims": {
+   "pain": 0.5694000124931335,
+   "fear": 0.578000009059906,
+   "negative emotion": 0.5922999978065491,
+   "bad world": 0.6491000056266785,
+   "sadness": 0.7009999752044678,
+   "numbness": 0.5335999727249146,
+   "body": 0.536899983882904,
+   "excitement": 0.6179999709129333,
+   "neutral": 0.5764999985694885
+  },
+  "desc_top": "sadness",
+  "desc_rank": 6,
+  "verified": false
+ }
+}
