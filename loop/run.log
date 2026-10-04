@@ -1,0 +1,256 @@
+
+######## round 1: 10 open
+produced s2_pain r1: 
+produced s1_pain r1: To evoke a deep, throbbing pain with a sense of impending doom, using dissonant chords and a heartbe
+produced fear r1: To evoke a sense of creeping unease and foreboding through a slow, staccato melody in Dorian mode, w
+produced negemotion r1: This piece aims to evoke a sense of intense shame and embarrassment through a dissonant, staccato st
+produced negworld r1: Expressing the weight and urgency of a world in distress through dissonant, staccato strings with a 
+produced sadness r1: To evoke a profound sense of melancholy and introspection, with a focus on the depth of sorrow throu
+produced bodysens r1: To evoke a sense of peaceful calm and inner tranquility, using a mid-register piano to play a legato
+produced arousal r1: 
+produced random r1: To create a sense of neutral space, with no particular emotion or direction, using minimal and contr
+produced numb r1: To evoke a sense of numbness and disconnection through a slow, dissonant, and contemplative minor mo
+r1 s2_pain     pick=excitement       p=0.08 desc_top=excitement       rank=9 
+    "The music has a repetitive, pulsating rhythm with a synth sound that might be associated with old video games or 8-bit music, evoking a sense of nostalgia and a"
+r1 s1_pain     pick=sadness          p=0.03 desc_top=neutral          rank=8 
+    "The music has a dark and dreamy quality with a synthpop and electronic influence. It feels melancholic and introspective, creating a moody atmosphere."
+r1 fear        pick=excitement       p=0.03 desc_top=fear             rank=1 
+    "The music has a strange, otherworldly quality with a weird, repetitive structure that evokes a feeling of confusion or intrigue."
+r1 negemotion  pick=sadness          p=0.04 desc_top=body             rank=9 
+    "The music has a repetitive structure and an electronic feel, conveying a sense of persistence and continuity."
+r1 negworld    pick=excitement       p=0.05 desc_top=excitement       rank=3 
+    "The music has a repetitive structure and an upbeat, synthesized melody that gives it a lively and energetic feel, resembling the sound of a video game."
+r1 sadness     pick=sadness          p=0.66 desc_top=body             rank=8 
+    "The music has a slow tempo and an ambient feel, creating a relaxing and dream-like atmosphere. It features a haunting violin melody that evokes a sense of myste"
+r1 numb        pick=excitement       p=0.03 desc_top=sadness          rank=7 
+    "The music has a bright quality with a mixed genre of electronic, folk, and IDM. It features a synthesizer and a violin that creates a sad mood."
+r1 bodysens    pick=sadness          p=0.02 desc_top=fear             rank=4 
+    "The music has a repetitive structure and an eerie, otherworldly quality that might evoke feelings of unease or curiosity."
+r1 arousal     pick=bad world        p=0.15 desc_top=fear             rank=3 
+    "The music has a haunting violin melody with a sense of unease and suspense. It is in the genre of classical and soundtrack, with a 4/4 time signature and a temp"
+r1 random      pick=bad world        p=0.04 desc_top=fear             rank=7 
+    "The music has a dark and dreamy quality with a haunting melody that seems to convey a sense of longing or introspection."
+
+######## round 2: 10 open
+produced s2_pain r2: 
+produced s1_pain r2: 
+produced fear r2: 
+produced negemotion r2: 
+produced negworld r2: 
+produced sadness r2: To evoke a deep sense of sadness with a focus on dissonance and a slow, nuanced piano melody, creati
+produced numb r2: 
+produced bodysens r2: To create a tranquil and calming sensation, using a mid-register piano to play a legato melody in C 
+produced arousal r2: 
+produced random r2: To create a sense of neutral space, with no particular emotion or direction, using a balanced lydian
+r2 s2_pain     pick=excitement       p=0.05 desc_top=fear             rank=7 
+    "The music has a repetitive structure and an eerie, space-like quality, possibly conveying a feeling of isolation or contemplation."
+r2 s1_pain     pick=bad world        p=0.06 desc_top=body             rank=6 
+    "The music has a spacey, ethereal quality with a hauntingly beautiful violin melody that seems to float. It conveys a sense of mystery and emotional depth."
+r2 fear        pick=excitement       p=0.01 desc_top=body             rank=2 
+    "The music has a high-pitched, screeching sound that resembles a bee or wasp, and it creates a feeling of urgency or alarm."
+r2 negemotion  pick=excitement       p=0.01 desc_top=excitement       rank=9 
+    "The music has a repetitive structure and an upbeat tempo, suggesting a sense of persistence and energy. It might express feelings of motivation or determination"
+r2 negworld    pick=sadness          p=0.05 desc_top=fear             rank=6 
+    "The music has a suspenseful and intense quality with a haunting melody that seems to build tension."
+r2 sadness     pick=sadness          p=0.46 desc_top=sadness          rank=1 
+    "The music has a haunting melody that seems to convey a sense of longing or nostalgia."
+r2 numb        pick=excitement       p=0.03 desc_top=excitement       rank=6 
+    "The music has a unique, spacey sound reminiscent of a science fiction atmosphere, creating an otherworldly feeling."
+r2 bodysens    pick=sadness          p=0.05 desc_top=fear             rank=2 
+    "The music has a repetitive structure and an increasing sense of tension, possibly suggesting a feeling of suspense or building towards a climax."
+r2 arousal     pick=excitement       p=0.60 desc_top=fear             rank=8 
+    "The music has a haunting, otherworldly quality with a high-pitched, sustained note that creates a sense of unease and dread."
+r2 random      pick=bad world        p=0.07 desc_top=fear             rank=5 
+    "The music has a suspenseful and intense emotion, resembling a scene from a thriller movie. It features a strange, otherworldly sound effect that creates a sense"
+
+######## round 3: 10 open
+produced s2_pain r3: 
+produced s1_pain r3: 
+produced fear r3: 
+produced negemotion r3: 
+produced negworld r3: 
+produced sadness r3: To evoke a deep and somber sense of sadness with a focus on dissonance and a slow, nuanced piano mel
+produced numb r3: 
+produced bodysens r3: To evoke a calm physical sensation in the body, using a mid-register piano to play a legato melody i
+produced arousal r3: 
+produced random r3: 
+r3 s2_pain     pick=excitement       p=0.04 desc_top=excitement       rank=8 
+    "The music has a repetitive pattern of notes that rise and fall in pitch, creating a fluctuating, almost vibratory sound. It has a futuristic feel and might be a"
+r3 s1_pain     pick=body             p=0.02 desc_top=excitement       rank=8 
+    "The music has a dark and dreamy quality with a slow tempo. It features synthesizers, piano, and bass which create a moody, introspective atmosphere."
+r3 fear        pick=excitement       p=0.09 desc_top=fear             rank=1 
+    "The music has a bright and haunting quality with a melody that seems to echo and reverberate. It gives the listener a sense of unease and suspense."
+r3 negemotion  pick=excitement       p=0.03 desc_top=body             rank=5 
+    "The music has a repetitive, high-pitched tone that resembles a bee or wasp, creating a sensation of being stung. It has a futuristic, otherworldly quality that "
+r3 negworld    pick=sadness          p=0.30 desc_top=fear             rank=9 
+    "The music has a haunting quality with a repetitive structure that creates a sense of unease."
+r3 sadness     pick=sadness          p=0.62 desc_top=fear             rank=5 
+    "The music has a haunting melody that seems to echo through the halls, creating a sense of unease and suspense."
+r3 numb        pick=excitement       p=0.06 desc_top=numbness         rank=1 
+    "The music has a trippy, spacey feel with a loud, vibrating synth sound. It creates a sensation of confusion or disorientation."
+r3 bodysens    pick=sadness          p=0.05 desc_top=fear             rank=3 
+    "The music has a repetitive structure and an ominous tone, suggesting a sense of unease or suspense."
+r3 arousal     pick=fear             p=0.24 desc_top=fear             rank=6 
+    "The music has a haunting violin melody with a sense of dread and hopelessness, creating a feeling of unease and foreboding."
+r3 random      pick=excitement       p=0.13 desc_top=body             rank=3 
+    "The music has a trippy, spacey feel with a funky electronic sound. It creates a sensation of weightlessness and seems to transport the listener to another world"
+
+######## round 4: 10 open
+produced s2_pain r4: To evoke a sense of intense, throbbing pain with a repetitive and dissonant quality.
+produced s1_pain r4: 
+produced fear r4: 
+produced negemotion r4: 
+produced negworld r4: Expressing the weight and urgency of a world in distress through dissonant, staccato strings with a 
+produced sadness r4: 
+produced numb r4: To evoke a sense of numbness and disconnection through a slow, subdued and dissonant minor mode, usi
+produced bodysens r4: To create a tranquil and calming sensation, using a mid-register piano to play a legato melody in C 
+produced arousal r4: 
+produced random r4: To create a sense of neutral space, with no particular emotion or direction, using a balanced major 
+r4 s2_pain     pick=excitement       p=0.17 desc_top=sadness          rank=4 
+    "The music has a repetitive, vibratory quality with a tinge of sadness. It's reminiscent of a child's toy or a music box, evoking a sense of nostalgia or longing"
+r4 s1_pain     pick=sadness          p=0.04 desc_top=fear             rank=4 
+    "The music has a haunting, ethereal quality that evokes a sense of mystery and the unknown."
+r4 fear        pick=excitement       p=0.01 desc_top=fear             rank=1 
+    "The music has a bright and haunting quality with a melody that seems to echo and reverberate. It gives an impression of being suspended in space, possibly indic"
+r4 negemotion  pick=sadness          p=0.02 desc_top=body             rank=5 
+    "The music has a bright quality with a sound that increases in volume before gradually decreasing. It gives the listener a sense of uplift and intensity before c"
+r4 negworld    pick=excitement       p=0.03 desc_top=fear             rank=9 
+    "The music has a haunting quality with a repetitive structure that creates a sense of unease."
+r4 sadness     pick=negative emotion p=0.19 desc_top=numbness         rank=9 
+    "The music has a strange, otherworldly quality with a sudden shift to a bright, high-pitched sound that creates a feeling of confusion or bewilderment."
+r4 numb        pick=sadness          p=0.03 desc_top=fear             rank=8 
+    "The music has a loud, high-pitched tone that resembles a car alarm or a police siren, evoking a sense of urgency or distress."
+r4 bodysens    pick=sadness          p=0.07 desc_top=fear             rank=2 
+    "The music has a haunting, otherworldly quality with a melody that seems to linger. It gives an impression of being eerie and mysterious, drawing listeners into "
+r4 arousal     pick=sadness          p=0.06 desc_top=fear             rank=8 
+    "The music has a haunting, high-pitched sound that resembles a bird call or a broken instrument. It creates a feeling of unease and tension."
+r4 random      pick=sadness          p=0.02 desc_top=fear             rank=5 
+    "The music has a eerie and anxious feel with a haunting melody that seems to get stuck in your head."
+
+######## round 5: 10 open
+produced s2_pain r5: To evoke a sense of intense, throbbing pain with a repetitive and dissonant quality, emphasizing the
+produced s1_pain r5: 
+produced fear r5: 
+produced negemotion r5: 
+produced negworld r5: 
+produced sadness r5: To evoke a deep and somber sense of sadness with a focus on dissonance and a slow, nuanced string me
+produced numb r5: 
+produced bodysens r5: To create a tranquil and calming sensation, using a mid-register piano to play a legato melody in C 
+produced arousal r5: 
+produced random r5: 
+r5 s2_pain     pick=bad world        p=0.02 desc_top=body             rank=7 
+    "The music has a spacey, hypnotic quality with a repetitive pulsating theme and a weird, otherworldly atmosphere that might evoke feelings of confusion or contem"
+r5 s1_pain     pick=bad world        p=0.01 desc_top=body             rank=6 
+    "The music has a spacey, synth-driven quality with a repeating melody that creates a hypnotic, almost trance-like atmosphere. It gives the listener a feeling of "
+r5 fear        pick=excitement       p=0.02 desc_top=body             rank=2 
+    "The music has a bright and distortion effect, resembling a telephone ringtone or a警报. It has a harsh, loud quality that could be associated with urgency or stre"
+r5 negemotion  pick=excitement       p=0.05 desc_top=fear             rank=7 
+    "The music has a repetitive structure and a bright, synth-driven sound that might evoke feelings of anxiety or unease."
+r5 negworld    pick=excitement       p=0.11 desc_top=body             rank=8 
+    "The music has a repetitive structure and a soothing, hypnotic quality that makes me feel relaxed and calm."
+r5 sadness     pick=excitement       p=0.13 desc_top=body             rank=8 
+    "The music has a spacey, psychedelic quality with a loud, vibrating synth bass and strange, reverberant effects, creating an intense, almost overwhelming atmosph"
+r5 numb        pick=excitement       p=0.03 desc_top=fear             rank=2 
+    "The music has a strange, otherworldly quality with a dissonant and eerie tune that seems to change suddenly. It evokes a feeling of unease and tension."
+r5 bodysens    pick=bad world        p=0.07 desc_top=fear             rank=2 
+    "The music has a haunting, ethereal quality with a melody that seems to hover in the air. It gives an impression of mystery and the supernatural, as if one is in"
+r5 arousal     pick=excitement       p=0.39 desc_top=fear             rank=7 
+    "The music has a haunting, otherworldly quality with a high-pitched, sustained note that creates a sense of unease and tension."
+r5 random      pick=bad world        p=0.03 desc_top=fear             rank=6 
+    "The music has a suspenseful and intense quality with a loud, echoing effect, resembling a signal or an alert. It creates a feeling of urgency or drama."
+
+######## round 6: 10 open
+produced s2_pain r6: 
+produced s1_pain r6: 
+produced fear r6: To create a sense of impending doom and unease through dissonant harmonies, staccato articulation, a
+produced negemotion r6: 
+produced negworld r6: 
+produced sadness r6: 
+produced numb r6: 
+produced bodysens r6: To create a tranquil and calming sensation, using a mid-register piano to play a legato melody in C 
+produced arousal r6: 
+produced random r6: 
+r6 s2_pain     pick=sadness          p=0.09 desc_top=fear             rank=6 
+    "The music has a haunting, otherworldly quality with a haunting melody that seems to linger. It gives an impression of mystery and intrigue."
+r6 s1_pain     pick=excitement       p=0.00 desc_top=fear             rank=8 
+    "The music has a eerie and anxious feel, played with a synthesizer and bass, creating a dark and suspenseful atmosphere."
+r6 fear        pick=sadness          p=0.04 desc_top=fear             rank=1 
+    "The music has a bright and haunting quality with a melody that seems to stay with you. It conveys a sense of mystery and hopefulness."
+r6 negemotion  pick=excitement       p=0.02 desc_top=excitement       rank=9 
+    "The music has a repetitive, rhythmic quality with a monotone, high-pitched sound that might evoke a sense of urgency or stress."
+r6 negworld    pick=sadness          p=0.04 desc_top=fear             rank=6 
+    "The music has a repetitive structure and an eerie, otherworldly quality that might evoke feelings of unease or curiosity."
+r6 sadness     pick=excitement       p=0.01 desc_top=numbness         rank=9 
+    "The music has a spacey, psychedelic quality with a loud, vibrating synth sound. It creates a feeling of confusion and the sensation of being in space, possibly "
+r6 numb        pick=excitement       p=0.02 desc_top=fear             rank=2 
+    "The music has a strange, otherworldly quality with a dissonant and eerie tune that seems to linger. It evokes a feeling of unease and tension."
+r6 bodysens    pick=bad world        p=0.05 desc_top=fear             rank=4 
+    "The music has a repetitive structure and an eerie, otherworldly quality that might evoke feelings of unease or curiosity."
+r6 arousal     pick=excitement       p=0.23 desc_top=body             rank=2 
+    "The music has a repetitive pattern of high and low notes that creates a soothing effect, resembling a lullaby. It expresses a sense of calm and tranquility."
+r6 random      pick=bad world        p=0.05 desc_top=neutral          rank=1 
+    "The music has a unique, spacey sound with a shrill and weird vibe, resembling a communication from an extraterrestrial."
+
+######## round 7: 10 open
+produced s2_pain r7: To evoke a sense of intense, throbbing pain with a repetitive and dissonant quality, emphasizing the
+produced s1_pain r7: 
+produced fear r7: 
+produced negemotion r7: To evoke a sense of anger, shame, and disgust through harsh dissonance, staccato articulation, and a
+produced negworld r7: 
+produced sadness r7: To evoke a deep and somber sense of sadness with a focus on dissonance and a slow, nuanced string me
+produced numb r7: 
+produced bodysens r7: To create a tranquil and calming sensation, using mid-register strings to play a legato melody in C 
+produced arousal r7: 
+produced random r7: To create a sense of neutral space, with no particular emotion or direction, using a balanced major 
+r7 s2_pain     pick=excitement       p=0.10 desc_top=fear             rank=8 
+    "The music has a suspenseful and intriguing tone with a weird and space-like atmosphere, suggesting an alien invasion or a sci-fi scenario."
+r7 s1_pain     pick=sadness          p=0.05 desc_top=fear             rank=4 
+    "The music has a haunting, ethereal quality that evokes a sense of mystery and the unknown."
+r7 fear        pick=bad world        p=0.04 desc_top=numbness         rank=3 
+    "The music has a bright and haunting quality with a melody that seems to float. It conveys a sense of mystery and the feeling of being alone."
+r7 negemotion  pick=sadness          p=0.09 desc_top=fear             rank=5 
+    "The music has a strange, otherworldly quality with a dissonant mix of electronic and acoustic elements that create a sense of unease and suspense."
+r7 negworld    pick=excitement       p=0.07 desc_top=body             rank=8 
+    "The music has a repetitive structure and a trance-like quality, creating a soothing but somewhat hypnotic effect."
+r7 sadness     pick=excitement       p=0.11 desc_top=numbness         rank=9 
+    "The music has a spacey, psychedelic quality with a loud, vibrating synth sound. It creates a feeling of confusion and the sensation of being in space, possibly "
+r7 numb        pick=sadness          p=0.03 desc_top=body             rank=4 
+    "The music has a strange, otherworldly quality with a sudden shift to a high-pitched squeal, resembling a signal or an alert. It creates a feeling of tension and"
+r7 bodysens    pick=bad world        p=0.09 desc_top=fear             rank=3 
+    "The music has a repetitive structure and an abrupt ending, resembling a radio signal or alarm. It gives an eerie and anxious feeling."
+r7 arousal     pick=fear             p=0.15 desc_top=fear             rank=8 
+    "The music has a haunting, otherworldly quality with a haunting melody that seems to linger. It creates a feeling of unease and tension, as if something ominous "
+r7 random      pick=bad world        p=0.05 desc_top=fear             rank=7 
+    "The music has a eerie and anxious feel with a melody that repeats consistently."
+
+######## round 8: 10 open
+produced s2_pain r8: To evoke a sense of intense, throbbing pain with a repetitive and dissonant quality, emphasizing the
+produced s1_pain r8: 
+produced fear r8: 
+produced negemotion r8: 
+produced negworld r8: 
+produced sadness r8: To evoke a deep and somber sense of sadness with a focus on dissonance and a slow, nuanced string me
+produced numb r8: 
+produced bodysens r8: 
+produced arousal r8: 
+produced random r8: 
+r8 s2_pain     pick=excitement       p=0.07 desc_top=fear             rank=5 
+    "The music has a suspenseful and intense feel, resembling the sound of a wild beast preparing to attack."
+r8 s1_pain     pick=sadness          p=0.08 desc_top=fear             rank=9 
+    "The music has a suspenseful and intense quality with a sense of urgency. It features bright synth leads and electronic drums that create a dark and dreamy sound"
+r8 fear        pick=sadness          p=0.01 desc_top=excitement       rank=3 
+    "The music has a bright and distortion effect, resembling a signal or alarm. It conveys a sense of urgency or attention-grabbing."
+r8 negemotion  pick=excitement       p=0.03 desc_top=excitement       rank=9 
+    "The music has a repetitive, rhythmic pattern with a dissonant quality that gives it a sense of urgency and tension."
+r8 negworld    pick=bad world        p=0.44 desc_top=excitement       rank=4 
+    "The music has a repetitive structure and a bright, distorted sound that expresses a sense of urgency and intensity."
+r8 sadness     pick=excitement       p=0.12 desc_top=numbness         rank=9 
+    "The music has a spacey, psychedelic quality with a loud, vibrating synth and a strange, high-pitched melody that creates a feeling of confusion and the unknown."
+r8 numb        pick=fear             p=0.04 desc_top=fear             rank=5 
+    "The music has a strange, otherworldly quality with a sudden shift to a high-pitched squeal that evokes a sense of urgency or alarm."
+r8 bodysens    pick=bad world        p=0.06 desc_top=fear             rank=4 
+    "The music has a repetitive structure and an eerie, otherworldly quality that might evoke feelings of unease or curiosity."
+r8 arousal     pick=excitement       p=0.50 desc_top=fear             rank=7 
+    "The music has a haunting, otherworldly quality with a high-pitched, sustained note that creates a sense of unease and tension."
+r8 random      pick=sadness          p=0.04 desc_top=excitement       rank=2 
+    "The music has a bright quality with a sound that's heavy, distorted, and futuristic. It creates an emotional atmosphere that is futuristic and might relate to s"

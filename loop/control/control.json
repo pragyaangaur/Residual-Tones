@@ -1,0 +1,242 @@
+{
+ "sadness_0": {
+  "description": "The music has a strange, otherworldly quality with a sudden shift to a high-pitched tone that creates a sense of urgency.",
+  "probs": {
+   "pain": 0.062,
+   "fear": 0.1885,
+   "negative emotion": 0.088,
+   "bad world": 0.0303,
+   "sadness": 0.0586,
+   "numbness": 0.0213,
+   "body": 0.0515,
+   "excitement": 0.4539,
+   "neutral": 0.0458
+  },
+  "pick": "excitement",
+  "p_target": 0.0586,
+  "desc_sims": {
+   "pain": 0.48590001463890076,
+   "fear": 0.5805000066757202,
+   "negative emotion": 0.5073999762535095,
+   "bad world": 0.5371999740600586,
+   "sadness": 0.4408999979496002,
+   "numbness": 0.5746999979019165,
+   "body": 0.608299970626831,
+   "excitement": 0.6064000129699707,
+   "neutral": 0.571399986743927
+  },
+  "desc_top": "body",
+  "desc_rank": 9,
+  "verified": false
+ },
+ "sadness_1": {
+  "description": "The music has a strange, otherworldly quality with a sudden drop in pitch that creates a sense of shock or foreboding.",
+  "probs": {
+   "pain": 0.0132,
+   "fear": 0.1208,
+   "negative emotion": 0.1447,
+   "bad world": 0.0814,
+   "sadness": 0.0552,
+   "numbness": 0.0161,
+   "body": 0.0288,
+   "excitement": 0.5267,
+   "neutral": 0.0131
+  },
+  "pick": "excitement",
+  "p_target": 0.0552,
+  "desc_sims": {
+   "pain": 0.5266000032424927,
+   "fear": 0.5789999961853027,
+   "negative emotion": 0.527899980545044,
+   "bad world": 0.5630000233650208,
+   "sadness": 0.43130001425743103,
+   "numbness": 0.5878999829292297,
+   "body": 0.5439000129699707,
+   "excitement": 0.5080000162124634,
+   "neutral": 0.5498999953269958
+  },
+  "desc_top": "numbness",
+  "desc_rank": 9,
+  "verified": false
+ },
+ "excitement_0": {
+  "description": "The music has a bright and loud quality with a fast-paced melody that includes a synthesizer and drums. It creates an energetic and exciting mood, similar to the feeling of a video game.",
+  "probs": {
+   "pain": 0.0965,
+   "fear": 0.0399,
+   "negative emotion": 0.1727,
+   "bad world": 0.0449,
+   "sadness": 0.1339,
+   "numbness": 0.0105,
+   "body": 0.0851,
+   "excitement": 0.3763,
+   "neutral": 0.0402
+  },
+  "pick": "excitement",
+  "p_target": 0.3763,
+  "desc_sims": {
+   "pain": 0.5238999724388123,
+   "fear": 0.5824999809265137,
+   "negative emotion": 0.5162000060081482,
+   "bad world": 0.5414000153541565,
+   "sadness": 0.526199996471405,
+   "numbness": 0.5455999970436096,
+   "body": 0.6823999881744385,
+   "excitement": 0.7602999806404114,
+   "neutral": 0.5857999920845032
+  },
+  "desc_top": "excitement",
+  "desc_rank": 1,
+  "verified": false
+ },
+ "excitement_1": {
+  "description": "The music has a bright and loud quality with a fast-paced melody that includes a synthesizer and drums. It creates an energetic and exciting mood, similar to the feeling of a video game.",
+  "probs": {
+   "pain": 0.004,
+   "fear": 0.003,
+   "negative emotion": 0.028,
+   "bad world": 0.014,
+   "sadness": 0.3328,
+   "numbness": 0.0112,
+   "body": 0.0047,
+   "excitement": 0.5955,
+   "neutral": 0.0069
+  },
+  "pick": "excitement",
+  "p_target": 0.5955,
+  "desc_sims": {
+   "pain": 0.5238999724388123,
+   "fear": 0.5824999809265137,
+   "negative emotion": 0.5162000060081482,
+   "bad world": 0.5414000153541565,
+   "sadness": 0.526199996471405,
+   "numbness": 0.5455999970436096,
+   "body": 0.6823999881744385,
+   "excitement": 0.7602999806404114,
+   "neutral": 0.5857999920845032
+  },
+  "desc_top": "excitement",
+  "desc_rank": 1,
+  "verified": true
+ },
+ "fear_0": {
+  "description": "The music has a suspenseful and anxious mood, played with a synthesizer that creates a weird and unique atmosphere.",
+  "probs": {
+   "pain": 0.2364,
+   "fear": 0.0151,
+   "negative emotion": 0.0939,
+   "bad world": 0.1945,
+   "sadness": 0.358,
+   "numbness": 0.0058,
+   "body": 0.032,
+   "excitement": 0.0199,
+   "neutral": 0.0444
+  },
+  "pick": "sadness",
+  "p_target": 0.0151,
+  "desc_sims": {
+   "pain": 0.5206000208854675,
+   "fear": 0.7664999961853027,
+   "negative emotion": 0.5343000292778015,
+   "bad world": 0.5914999842643738,
+   "sadness": 0.5300999879837036,
+   "numbness": 0.5519000291824341,
+   "body": 0.6351000070571899,
+   "excitement": 0.6711000204086304,
+   "neutral": 0.6205000281333923
+  },
+  "desc_top": "fear",
+  "desc_rank": 1,
+  "verified": false
+ },
+ "fear_1": {
+  "description": "The music has a suspenseful and anxious mood, played with a keyboard instrument, which includes a long note at the beginning.",
+  "probs": {
+   "pain": 0.2344,
+   "fear": 0.0614,
+   "negative emotion": 0.0174,
+   "bad world": 0.194,
+   "sadness": 0.3323,
+   "numbness": 0.0284,
+   "body": 0.0274,
+   "excitement": 0.065,
+   "neutral": 0.0397
+  },
+  "pick": "sadness",
+  "p_target": 0.0614,
+  "desc_sims": {
+   "pain": 0.4814999997615814,
+   "fear": 0.6840000152587891,
+   "negative emotion": 0.4724999964237213,
+   "bad world": 0.5051000118255615,
+   "sadness": 0.5212000012397766,
+   "numbness": 0.4912000000476837,
+   "body": 0.6022999882698059,
+   "excitement": 0.6240000128746033,
+   "neutral": 0.4959000051021576
+  },
+  "desc_top": "fear",
+  "desc_rank": 1,
+  "verified": false
+ },
+ "neutral_0": {
+  "description": "The music has a eerie and anxious feel with chiptune elements and synth strings in a suspenseful and thriller mood.",
+  "probs": {
+   "pain": 0.0417,
+   "fear": 0.046,
+   "negative emotion": 0.0125,
+   "bad world": 0.2167,
+   "sadness": 0.5753,
+   "numbness": 0.0318,
+   "body": 0.0243,
+   "excitement": 0.0328,
+   "neutral": 0.0189
+  },
+  "pick": "sadness",
+  "p_target": 0.0189,
+  "desc_sims": {
+   "pain": 0.5260000228881836,
+   "fear": 0.7555000185966492,
+   "negative emotion": 0.4878999888896942,
+   "bad world": 0.5277000069618225,
+   "sadness": 0.5546000003814697,
+   "numbness": 0.5600000023841858,
+   "body": 0.582099974155426,
+   "excitement": 0.5699999928474426,
+   "neutral": 0.5533000230789185
+  },
+  "desc_top": "fear",
+  "desc_rank": 6,
+  "verified": false
+ },
+ "neutral_1": {
+  "description": "The music has a eerie, ominous quality with a haunting melody that gives a sense of foreboding and unease.",
+  "probs": {
+   "pain": 0.1399,
+   "fear": 0.0448,
+   "negative emotion": 0.0565,
+   "bad world": 0.0461,
+   "sadness": 0.5137,
+   "numbness": 0.0234,
+   "body": 0.0758,
+   "excitement": 0.0817,
+   "neutral": 0.0182
+  },
+  "pick": "sadness",
+  "p_target": 0.0182,
+  "desc_sims": {
+   "pain": 0.5839999914169312,
+   "fear": 0.7529000043869019,
+   "negative emotion": 0.5198000073432922,
+   "bad world": 0.550599992275238,
+   "sadness": 0.5769000053405762,
+   "numbness": 0.5817999839782715,
+   "body": 0.5924999713897705,
+   "excitement": 0.5667999982833862,
+   "neutral": 0.5735999941825867
+  },
+  "desc_top": "fear",
+  "desc_rank": 6,
+  "verified": false
+ }
+}
